@@ -1,7 +1,0 @@
-<ul>
-{% for libro in bibliografia %}
-  <li>
-      <p>{{libro.autores}}, {%if libro.url %}<a href="{{libro.url}}">{% endif %}<i>{{libro.titulo}}</i>{% if libro.url %}</a>.{% endif %}, {{libro.editorial}}, {{libro.edicion}} ({{libro.fecha}}), ISBN: {{libro.isbn}}. <b>[{{libro.ref}}].</b></p>
-  </li>
-{% endfor %}
-</ul>
