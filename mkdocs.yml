@@ -1,0 +1,214 @@
+site_name: Procesamiento Digital de Señales
+site_description: >
+  Procesamiento Digital de Señales
+  Universidad Nacional de Tres de Febrero
+site_dir: _site
+site_url: "https://pdsuntref.github.io"
+copyright: "Licencia: CC-BY-SA 4.0"
+
+theme:
+  name: material
+  logo: 'img/logo.png'
+  language: es
+  features:
+    - content.code.annotate
+    - navigation.indexes
+#    - navigation.sections
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.top
+    - navigation.tracking
+    - toc.follow
+  palette:
+    primary: indigo
+    accent: deep orange
+  font:
+    text: Roboto
+    code: Fira Code
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - javascripts/fontawesome/all.min.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - css/bootstrap-card.css
+  - css/cards.css
+  - css/extra.css
+  - css/fontawesome/all.min.css
+  - css/quotes.css
+
+plugins:
+  - git-authors
+  - git-revision-date-localized
+  - glightbox
+  - macros
+
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - md_in_html
+  - codehilite:
+      guess_lang: false
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - footnotes
+  - meta
+  - toc:
+      permalink: "#"
+      toc_depth: 3
+      slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+  - smarty
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.keys
+  - pymdownx.magiclink:
+      repo_url_shortener: true
+  - pymdownx.mark
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.tilde
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Inicio:
+    - Inicio: index.md
+    - Sobre la materia: about/README.md
+    - Diapositivas de las clases: clases/README.md
+    - Guías de ejercicios: ejercicios/README.md
+    - Trabajos Prácticos: tps/README.md
+    - Exámenes viejos: examenes/README.md
+    - Extras: extras/README.md
+  - Sobre la materia:
+    - about/README.md
+    - Programa de la materia: about/programa.md
+    - Bibliografía: about/bibliografia.md
+    - Calendario: about/calendario.md
+  - Diapositivas de las clases: 
+    - clases/README.md
+    - Teoría:
+      - Señales y sistemas discretos: clases/sys_discretos.md
+      - DTFT: clases/dtft.md
+      - DFT: clases/dft.md
+      - FFT: clases/fft.md
+      - TZ: clases/tz.md
+      - Filtros IIR: clases/iir.md
+      - Filtros FIR: clases/fir.md
+    - Práctica:
+      - Señales y sistemas discretos: clases/Psys_discretos.md
+      - DTFT: clases/Pdtft.md
+      - DFT: clases/Pdft.md
+      - FFT: clases/Pfft.md
+      - TZ: clases/Ptz.md
+      - Filtros IIR: clases/Piir.md
+      - Filtros FIR: clases/Pfir.md
+  - Guías de ejercicios: 
+    - ejercicios/README.md
+    - Programación: ejercicios/programacion.md
+    - Señales y sistemas discretos: ejercicios/guia_sys.md
+    - DTFT: ejercicios/guia_dtft.md
+    - DFT: ejercicios/guia_dft.md
+    - TZ señales: ejercicios/guia_tz1.md
+    - TZ sistemas: ejercicios/guia_tz2.md
+    - Filtros IIR: ejercicios/guia_iir.md
+    - Filtros FIR: ejercicios/guia_fir.md
+  - Trabajo Práctico: tps/README.md
+  - Evaluaciones pasadas: 
+    - examenes/README.md
+    - Primer parcial: examenes/primero.md
+    - Segundo parcial: examenes/segundo.md
+    - Final: examenes/final.md
+  - Extras:
+    - extras/README.md
+    - Tesis: extras/tesis.md
+    - Seminarios: extras/seminarios.md
+    - Videos y recursos útiles: 
+        - extras/misc.md
+        - Programación: extras/programacion.md
+        - Fourier: extras/fourier.md
+
+extra:
+  bibliografia:
+    principal:
+      - autores: Alan V. Oppenheim y Ronald W Schafer
+        titulo: Tratamiento de Señales en tiempo Discreto
+        edicion: 3.ª ed.
+        editorial: Prentice Hall
+        isbn: 9788483227183
+        fecha: 2011
+        portada: oppenheim_esp.webp
+      - autores: Alan V. Oppenheim y Ronald W Schafer
+        titulo: Discrete-Time Signal Processing
+        edicion: 3.ª ed.
+        editorial: Prentice Hall
+        isbn: 9780131988422 
+        fecha: 2010
+        portada: oppenheim_ing.webp
+      - autores: John G. Proakis y Dimitris K. Manolakis
+        titulo: Digital Signal Processing
+        edicion: 4.ª ed.
+        editorial: Prentice Hall
+        isbn: 9780131873742
+        fecha: 2006
+        portada: proakis_ing.jpg
+      - autores: John G. Proakis y Dimitris K. Manolakis
+        titulo: Tratamiento Digital de Señales
+        edicion: 4.ª ed.
+        editorial: Prentice Hall
+        isbn: 9788483223475
+        fecha: 2007
+        portada: proakis_esp.webp
+    consulta:
+      - autores: Richard G. Lyons
+        titulo: "Understanding Digital Signal Processing"
+        editorial: Prentice Hall
+        fecha: 2001
+      - autores: Sanjit K. Mitra
+        titulo: "Digital Signal Processing - A computer based approach"
+        editorial: McGraw Hill
+        fecha: 2001
+      - autores: Boaz Porat
+        titulo: "A Course in Digital Signal Processing"
+        editorial: John Wiley & Sons
+        fecha: 1997
+      - autores: Sophocles Ofranidis
+        titulo: "Introduction to Signal Processing"
+        editorial: Prentice Hall
+        fecha: 2009
+      - autores: David Havelock, Sonoko Kuwano y Michael Vorländer
+        titulo: "Handbook of Signal Processing in Acoustics"
+        editorial: Springer
+        fecha: 2008
+      - autores: Udo Zölzer
+        titulo: "Digital Audio Signal Processing"
+        editorial: John Wiley & Sons
+        fecha: 2008
+      - autores: Udo Zölzer
+        titulo: "DAFX - Digital Audio Effect"
+        editorial: John Wiley & Sons
+        fecha: 2002
+       
+     
+       
+     
+
+
