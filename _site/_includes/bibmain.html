@@ -1,0 +1,22 @@
+{% for libro in bibliografia %}
+<div class="boot-card boot-card-mb-3">
+  <div class="boot-card-row boot-card-g-0">
+    <div class="boot-card-col-md-4">
+        <img src="{{libro.portada}}" style="max-width: 200px" class="boot-card-img-fluid rounded-start" alt="...">
+    </div>
+    <div class="boot-card-col-md-8">
+      <div class="boot-card-body">
+        <h3 class="boot-card-title">{{libro.titulo}}</h3>
+        <h5 class="boot-card-subtitle">{{libro.autores}}</h5>
+        <p class="boot-card-text">{{libro.edicion}} ({{libro.fecha}}), {{libro.editorial}}, ISBN: {{libro.isbn}}.</p>
+        {% if libro.observaciones %}
+        <h6 class="boot-card-subtitle">Observaciones sobre la edición a usar</h6>
+        <p class="boot-card-text">
+        {{libro.observaciones}}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
