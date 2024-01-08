@@ -101,7 +101,22 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pdsuntref.github.io/ejercicios/guia_dft/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pdsuntref.github.io/ejercicios/guia_dtft/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pdsuntref.github.io/ejercicios/guia_sys/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pdsuntref.github.io/ejercicios/guia_tz1/</loc>
          <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
     </url>
