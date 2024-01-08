@@ -111,6 +111,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pdsuntref.github.io/ejercicios/guia_fir/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pdsuntref.github.io/ejercicios/guia_iir/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pdsuntref.github.io/ejercicios/guia_sys/</loc>
          <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
