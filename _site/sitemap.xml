@@ -121,6 +121,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pdsuntref.github.io/ejercicios/guia_tz2/</loc>
+         <lastmod>2024-01-08</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pdsuntref.github.io/ejercicios/programacion/</loc>
          <lastmod>2024-01-08</lastmod>
          <changefreq>daily</changefreq>
