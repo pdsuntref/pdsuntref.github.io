@@ -144,8 +144,6 @@ nav:
     - JAAS: extras/tps_jaas.md
     - Videos y recursos útiles: 
         - extras/misc.md
-        - Programación: extras/programacion.md
-        - Fourier: extras/fourier.md
 
 extra:
   bibliografia:
