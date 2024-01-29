@@ -44,6 +44,7 @@ plugins:
   - git-revision-date-localized
   - glightbox
   - macros
+  - search
 
 markdown_extensions:
   - abbr
@@ -140,6 +141,7 @@ nav:
     - extras/README.md
     - Tesis: extras/tesis.md
     - Seminarios: extras/seminarios.md
+    - JAAS: extras/tps_jaas.md
     - Videos y recursos útiles: 
         - extras/misc.md
         - Programación: extras/programacion.md
