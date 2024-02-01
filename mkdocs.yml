@@ -104,6 +104,8 @@ nav:
     - Programa de la materia: about/programa.md
     - Bibliografía: about/bibliografia.md
     - Calendario: about/calendario.md
+    - Contacto: about/contacto.md
+    - Presentación y fechas importantes: about/intro.md
   - Diapositivas de las clases: 
     - clases/README.md
     - Teoría:
@@ -142,8 +144,7 @@ nav:
     - Tesis: extras/tesis.md
     - Seminarios: extras/seminarios.md
     - JAAS: extras/tps_jaas.md
-    - Videos y recursos útiles: 
-        - extras/misc.md
+    - Videos y recursos útiles: extras/misc.md
 
 extra:
   bibliografia:
