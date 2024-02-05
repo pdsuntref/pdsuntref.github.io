@@ -65,9 +65,13 @@ La fecha de la pre-entrega es el **xx de xxxx**, mientras que la fecha de la ent
 ## Referencias
 
 [1] Chowning, J. M. (1977). The Synthesis of Complex Audio Spectra by Means of Frequency Modulation. Computer Music Journal, 1(2), 46–54. http://www.jstor.org/stable/23320142 [LINK]
+
 [2] Sean L. (2021). Computational Music Synthesis, first edition, available for free at http://cs.gmu.edu/∼sean/book/synthesis/ [LINK]
+
 [3] Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras and TensorFlow: concepts, tools, and techniques to build intelligent systems (2nd ed.). O’Reilly. 
+
 [4] Caspe, F., McPherson, A., & Sandler, M. (2022). DDX7: Differentiable FM Synthesis of Musical Instrument Sounds. Proceedings of the 23rd International Society for Music Information Retrieval Conference. [LINK]
+
 [5] Engel, J, Hantrakul, L.H., Gu, C. & Roberts, A. (2020). DDSP: Differentiable Digital Signal Processing. Proceedings of the 8th International Conference on Learning Representations. [LINK]
 
 
