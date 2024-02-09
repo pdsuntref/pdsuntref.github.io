@@ -18,9 +18,22 @@ Una red neuronal es, a grandes rasgos, un sistema compuesto por distintos bloque
 
 ![Perceptrón multi capa](./imgs/mlp.png "Red neuronal básica de tres capas de neuronas, tomado de [3]")
 
-Para entrenar una red de este tipo se debe recurrir al algoritmo de propagación del error hacia atrás (o *backpropagation*, como se lo conoce por su nombre en inglés). Este algoritmo consiste en pasarle a la red una instancia de entrenamiento, realizar una predicción, medir el error cometido, luego ir capa por capa en reversa midiendo la contribución de cada conexión al error y finalmente hacer ligeras correcciones a los pesos de conexión de las distintas neuronas a fin de minimizar el error cometido.
+La idea detrás del *entrenamiento* de un modelo de este tipo es, contrario a lo que uno podría esperar, bastante sencilla. Supongamos que tenemos un modelo $f$ con un conjunto de parámetros $\gamma$. Ante una entrada $x$, tendremos una salida del modelo $y_1$ o $f(x|\gamma)$, es decir, la salida del modelo $f$ con un conjunto de parámetros $\gamma$ dada una entrada en particular $x$. Mediante este proceso logramos que nuestro modelo haga *predicciones* basadas en algún dato de entrada, el tema es ¿cómo sabemos si esa predicción es correcta? Es en este punto en donde entra la función de costo. La idea de esta etapa es cuantificar qué tanto se desvió la predicción del modelo del resultado que verdaderamente esperamos. Acá hay que hacer una pausa para hacer un par de aclaraciones importantes:
 
-Con estos conceptos presentados muy por arriba debería alcanzarles para entender los temas de aprendizaje automático que se tratan en el trabajo, pero si tienen curiosidad por aprender más sobre el tema, un libro muy bueno es el de la referencia [3].
+  - Durante la etapa de entrenamiento la información sobre lo que debería entregar un modelo dada una entrada determinada es conocida.
+  - Esto es cierto si trabajamos con sistemas bajo el paradigma de aprendizaje *supervisado*, no se cumple (o al menos no de esta forma) en otros paradigmas usuales en aprendizaje automático, como aprendizaje no supervisado o aprendizaje por refuerzo.
+
+Retomando donde estábamos, la función de costo nos permite cuantificar el *error* en la predicción de este modelo. Esta función no es fija, se elige de acuerdo al tipo de problema con el que estamos trabajando, sin embargo hay algunos ejemplos bastante clásicos que podemos mencionar:
+
+  - En problemas de regresión, métricas de distancia como el error cuadrático medio o su raíz son bastante usuales.
+  - En problemas de clasificación es común trabajar con la idea de entropía cruzada, una noción que permite analizar la información entre instancias para lograr separar correctamente los distintos grupos de interés.
+  - Muchas veces al trabajar con audio se definen métricas que tienen en cuenta nociones perceptuales, como se imaginarán este trabajo no va a ser la excepción.
+
+Una vez que tenemos clara cuál es la función de costo que queremos optimizar surge otra pregunta interesante ¿qué hacemos con esta información? Al estudiar el error de  las predicciones sobre las distintas instancias de nuestro cuerpo de datos de entrenamiento ganamos una noción de qué tan lejos está nuestro modelo de cumplir con la tarea para la cual lo estamos entrenando, o, en realidad, de minimizar la función que propusimos. Esta salvedad es importante, porque si elegimos mal la función a optimizar podemos obtener errores bajísimos y el modelo puede ser pésimo para cumplir la tarea que nos interesa. Entonces, retomando nuevamente, si al estudiar el valor de la función de costo sobre nuestros datos encontramos que esta es elevada, significa que el conjunto de parámetros $\gamma$ de nuestro modelo no es correcto y necesita ser modificado para lograr el objetivo propuesto, esto dispara otra pregunta ¿cómo acualizo los parámetros del modelo? Esto se logra mediante un algoritmo conocido como propagación hacia atrás (usualmente conocido como *backpropagation*, en inglés). Es, en pocas palabras, una implementación muy eficiente de la regla de la cadena, que permite propagar los errores en la predicción sobre todo el modelo, buscando a partir de esos gradientes llegar a un mínimo de la función de costos propuesta. Una vez que se propagó el error y se modificaron los parámetros del sistema en consecuencia, se repite el proceso. Esto es a lo que llamamos ciclo de entrenamiento, y termina cuando se cumple una cantidad de iteraciones (conocidas como *epochs* o *épocas*) definidas por el usuario o si se cumple alguna condición también definida por el usuario. Un esquema de todo esto se puede ver a continuación:
+
+[ESQUEMA LOOP ENTRENAMIENTO]
+
+Con esta mini intro no esperamos que sean expertos en aprendizaje automático ni mucho menos, pero si tienen claros estos conceptos con el nivel de profundidad con el que fueron tratados en estos párrafos van a poder llevar adelante el trabajo sin problemas. Si tienen curiosidad por aprender más sobre el tema, un libro muy bueno es el de la referencia [3].
 
 ## El Yamaha DX7
 
@@ -40,7 +53,7 @@ El esquema general del modelo propuesto por Caspe se puede ver a continuación:
 
 ![Arquitectura del modelo DDX7, en rojo el cálculo de pitch, loudness, el algorítmo de síntesis FM y la función de costo](./imgs/arquitectura.png "Arquitectura del modelo DDX7 y bloques sobre los que se trabajará (en rojo)")
 
-de todo el modelo, solo deben modificar los bloques sombreados en rojo. Además de este enunciado les proporcionamos un esqueleto del código [LINK AL ESQUELETO], con la parte relacionada a la parte de aprendizaje automático resuelta (no es necesario que sepan nada de ese campo para realizar este trabajo, solo conceptos a gran escala como los que mencionamos anteriormente).
+de todo el modelo, solo deben modificar los bloques sombreados en rojo. Además de este enunciado les proporcionamos un esqueleto del código [LINK AL ESQUELETO], con la parte relacionada a la parte de aprendizaje automático resuelta. Como mencionamos antes, no es necesario que sepan nada de ese campo para realizar este trabajo, solo conceptos a gran escala.
 
 En el caso de este trabajo nos concentraremos en la emulación de sonidos de violín únicamente, les dejamos los datos necesarios para el entrenamiento del modelo [LINK A DATASET].
 
@@ -52,7 +65,7 @@ El orden de las tareas que deberían llevar a cabo es:
     -
     -
 
-El desarrollo de su trabajo tiene que verse en un informe que siga el formato propuesto [LINK AL FORMATO], cumpliendo con todas las secciones que en él se detallan. 
+El desarrollo de su trabajo tiene que verse en un informe que siga el formato propuesto (en [Word](https://docs.google.com/document/d/1XwUWKWTRPKlJPzpGfd20riz-uNmUvYBx/edit?usp=drive_link&ouid=109118869525257004528&rtpof=true&sd=true) o en [LaTex](https://drive.google.com/file/d/12xZTOi8-OQKFwEuPdAjPenD1G1w3OghP/view?usp=drive_link)), cumpliendo con todas las secciones que en él se detallan. 
 
 Es muy importante que hagan este trabajo con mucho tiempo, además de la dificultad que presenta el problema planteado, muchas de las etapas son computacionalmente intensas, por lo que el proceso de pruebas va a ser largo y algo tedioso. Definitivamente no es un trabajo para hacer en un par de días (es literalmente imposible).
 
