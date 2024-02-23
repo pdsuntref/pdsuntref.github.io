@@ -1997,9 +1997,13 @@
 <p>En el caso de este trabajo nos concentraremos en la emulación de sonidos de violín únicamente, les dejamos los datos necesarios para el entrenamiento del modelo [LINK A DATASET].</p>
 <p>La idea del trabajo es que completen los distintos scripts siguiendo las ideas del trabajo de Caspe, variaciones de ellas o ideas propias. Es muy importante que respeten los tipos de dato y las cantidades de variables de entrada y salida que se especifican en cada parte del esqueleto; todo está documentado, pero ante la duda consulten antes de dar cosas por sentado.</p>
 <p>El orden de las tareas que deberían llevar a cabo es:</p>
-<div class="codehilite"><pre><span></span><code>- 
--
--
+<div class="codehilite"><pre><span></span><code>- A partir del archivo *requirements.txt* incluido en el esqueleto, generar un entorno de conda para poder tener instaladas las librerías necesarias para el trabajo. Si llegan a necesitar otras librerías, avisen. Esto lo pueden hacer con el comando *conda install --file requirements.txt*
+- Completar las funciones en *spectral_ops.py* dentro de la carpeta *ddx7*. Comprobar su correcto funcionamiento y luego generar los datos corriendo el archivo *create_data.py* en la carpeta *dataset*. 
+- Completar las funciones de costo en *loss_functions.py*, dentro de la carpeta *ddx7*.
+- Completar la función de síntesis FM en *core.py*, dentro de la carpeta *ddx7*.
+- Entrenar el modelo ejecutando *train.py*. Esto puede tardar mucho, tengan paciencia. Una vez que termine, escuchen los archivos generados en la carpeta *xx* y verifiquen que tengan sentido.
+- Empezar a proponer pruebas, ¿qué pasa si cambio la función de costo? ¿y si modifico el algoritmo para encontrar la frecuencia fundamental del audio? ¿la ponderación A propuesta en el cálculo de loudness aporta algo útil? Vayan cambiando bloques del modelo y entrenando distintas versiones, estudiando cómo varían los resultados en cada una de ellas. Propongan alguna métrica que permita analizar qué tan parecida es la señal estimada por el sistema a la señal de referencia.
+- Escriban el informe, dándole especial atención al análisis de los resultados obtenidos en las distintas pruebas que realicen.
 </code></pre></div>
 
 <p>El desarrollo de su trabajo tiene que verse en un informe que siga el formato propuesto (en <a href="https://docs.google.com/document/d/1XwUWKWTRPKlJPzpGfd20riz-uNmUvYBx/edit?usp=drive_link&amp;ouid=109118869525257004528&amp;rtpof=true&amp;sd=true">Word</a> o en <a href="https://drive.google.com/file/d/12xZTOi8-OQKFwEuPdAjPenD1G1w3OghP/view?usp=drive_link">LaTex</a>), cumpliendo con todas las secciones que en él se detallan. </p>
@@ -2033,7 +2037,7 @@
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 9, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 23, 2024</span>
   </span>
 
     

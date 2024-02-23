@@ -61,13 +61,13 @@ La idea del trabajo es que completen los distintos scripts siguiendo las ideas d
 
 El orden de las tareas que deberían llevar a cabo es:
 
-    - A partir del archivo *requirements.txt* incluido en el esqueleto, generar un entorno de conda para poder tener instaladas las librerías necesarias para el trabajo. Si llegan a necesitar otras librerías, avisen. Esto lo pueden hacer con el comando *conda install --file requirements.txt*
-    - Completar las funciones en *spectral_ops.py* dentro de la carpeta *ddx7*. Comprobar su correcto funcionamiento y luego generar los datos corriendo el archivo *create_data.py* en la carpeta *dataset*. 
-    - Completar las funciones de costo en *loss_functions.py*, dentro de la carpeta *ddx7*.
-    - Completar la función de síntesis FM en *core.py*, dentro de la carpeta *ddx7*.
-    - Entrenar el modelo ejecutando *train.py*. Esto puede tardar mucho, tengan paciencia. Una vez que termine, escuchen los archivos generados en la carpeta *xx* y verifiquen que tengan sentido.
-    - Empezar a proponer pruebas, ¿qué pasa si cambio la función de costo? ¿y si modifico el algoritmo para encontrar la frecuencia fundamental del audio? ¿la ponderación A propuesta en el cálculo de loudness aporta algo útil? Vayan cambiando bloques del modelo y entrenando distintas versiones, estudiando cómo varían los resultados en cada una de ellas. Propongan alguna métrica que permita analizar qué tan parecida es la señal estimada por el sistema a la señal de referencia.
-    - Escriban el informe, dándole especial atención al análisis de los resultados obtenidos en las distintas pruebas que realicen.
+  - A partir del archivo *requirements.txt* incluido en el esqueleto, generar un entorno de conda para poder tener instaladas las librerías necesarias para el trabajo. Si llegan a necesitar otras librerías, avisen. Esto lo pueden hacer con el comando *conda install --file requirements.txt*
+  - Completar las funciones en *spectral_ops.py* dentro de la carpeta *ddx7*. Comprobar su correcto funcionamiento y luego generar los datos corriendo el archivo *create_data.py* en la carpeta *dataset*. 
+  - Completar las funciones de costo en *loss_functions.py*, dentro de la carpeta *ddx7*.
+  - Completar la función de síntesis FM en *core.py*, dentro de la carpeta *ddx7*.
+  - Entrenar el modelo ejecutando *train.py*. Esto puede tardar mucho, tengan paciencia. Una vez que termine, escuchen los archivos generados en la carpeta *xx* y verifiquen que tengan sentido.
+  - Empezar a proponer pruebas, ¿qué pasa si cambio la función de costo? ¿y si modifico el algoritmo para encontrar la frecuencia fundamental del audio? ¿la ponderación A propuesta en el cálculo de loudness aporta algo útil? Vayan cambiando bloques del modelo y entrenando distintas versiones, estudiando cómo varían los resultados en cada una de ellas. Propongan alguna métrica que permita analizar qué tan parecida es la señal estimada por el sistema a la señal de referencia.
+  - Escriban el informe, dándole especial atención al análisis de los resultados obtenidos en las distintas pruebas que realicen.
 
 El desarrollo de su trabajo tiene que verse en un informe que siga el formato propuesto (en [Word](https://docs.google.com/document/d/1XwUWKWTRPKlJPzpGfd20riz-uNmUvYBx/edit?usp=drive_link&ouid=109118869525257004528&rtpof=true&sd=true) o en [LaTex](https://drive.google.com/file/d/12xZTOi8-OQKFwEuPdAjPenD1G1w3OghP/view?usp=drive_link)), cumpliendo con todas las secciones que en él se detallan. 
 
