@@ -7,8 +7,8 @@ las bases del procesamiento digital de señales que le permitan comprender los
 algoritmos de procesamiento y diseños existentes, y a su vez tener las herramientas
 para el diseño de otros nuevos.
 
-La idea de la materia consiste en sentar las bases formales del procesamiento de señales y sistemas digitales en general.
-Utilizando dichas bases, se buscará aplicarlas a problemas específicos de la ingeniería de sonido, estudiando en detalle algún caso en particular.
+El objetivo de la materia consiste en sentar las bases formales del procesamiento de señales y sistemas digitales en general.
+Utilizando dichas bases, se buscará aplicarlas a problemas específicos de la ingeniería de sonido, estudiando en detalle casos particulares.
 
 Al finalizar el curso, deberán ser capaces de diseñar e implementar las
 herramientas de procesamiento básicas y conocer los alcances de otras herramientas
