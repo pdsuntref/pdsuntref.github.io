@@ -77,7 +77,7 @@ Es muy importante que hagan este trabajo con mucho tiempo, además de la dificul
 
 El trabajo puede realizarse en grupos de hasta 4 personas. Además de la entrega del trabajo completo se les pide una pre-entrega, que corresponde a una versión parcial del trabajo (secciones de Introducción, Marco teórico y Desarrollo experimental). No es necesario adjuntar código en esta etapa.
 
-La fecha de la pre-entrega es el **17 de mayo**, mientras que la fecha de la entrega final es el **19 de junio**. No se aceptarán entregas finales fuera de esta fecha y entregas parciales fuera de término serán penalizadas con **1** punto por cada día de entrega tarde.
+La fecha de la pre-entrega es el **20 de mayo**, mientras que la fecha de la entrega final es el **19 de junio**. No se aceptarán entregas finales fuera de esta fecha y entregas parciales fuera de término serán penalizadas con **1** punto por cada día de entrega tarde.
 
 ## Referencias
 
