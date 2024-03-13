@@ -18,7 +18,7 @@ Una red neuronal es, a grandes rasgos, un sistema compuesto por distintos bloque
 
 ![Perceptrón multi capa](./imgs/mlp.png "Red neuronal básica de tres capas de neuronas, tomado de [3]")
 
-La idea detrás del *entrenamiento* de un modelo de este tipo es, contrario a lo que uno podría esperar, bastante sencilla. Supongamos que tenemos un modelo $f$ con un conjunto de parámetros $\gamma$. Ante una entrada $x$, tendremos una salida del modelo $y_1$ o $f(x|\gamma)$, es decir, la salida del modelo $f$ con un conjunto de parámetros $\gamma$ dada una entrada en particular $x$. Mediante este proceso logramos que nuestro modelo haga *predicciones* basadas en algún dato de entrada, el tema es ¿cómo sabemos si esa predicción es correcta? Es en este punto en donde entra la función de costo, que llamaremos $g(y,\hat{y})$. La idea de esta etapa es cuantificar qué tanto se desvió la predicción del modelo ($\hat{y}) del resultado que verdaderamente esperamos($y$). Acá hay que hacer una pausa para hacer un par de aclaraciones importantes:
+La idea detrás del *entrenamiento* de un modelo de este tipo es, contrario a lo que uno podría esperar, bastante sencilla. Supongamos que tenemos un modelo $f$ con un conjunto de parámetros $\gamma$. Ante una entrada $x$, tendremos una salida del modelo $y_1$ o $f(x|\gamma)$ (permitan el abuso de notación), es decir, la salida del modelo $f$ con un conjunto de parámetros $\gamma$ dada una entrada en particular $x$. Mediante este proceso logramos que nuestro modelo haga *predicciones* basadas en algún dato de entrada, el tema es ¿cómo sabemos si esa predicción es correcta? Es en este punto en donde entra la función de costo, que llamaremos $g(y,\hat{y})$. La idea de esta etapa es cuantificar qué tanto se desvió la predicción del modelo ($\hat{y}$) del resultado que verdaderamente esperamos($y$). Acá hay que hacer una pausa para hacer un par de aclaraciones importantes:
 
   - Durante la etapa de entrenamiento la información sobre lo que debería entregar un modelo dada una entrada determinada es conocida.
   - Esto es cierto si trabajamos con sistemas bajo el paradigma de aprendizaje *supervisado*, no se cumple (o al menos no de esta forma) en otros paradigmas usuales en aprendizaje automático, como aprendizaje no supervisado o aprendizaje por refuerzo.
@@ -27,9 +27,9 @@ Retomando donde estábamos, la función de costo nos permite cuantificar el *err
 
   - En problemas de regresión, métricas de distancia como el error cuadrático medio o su raíz son bastante usuales.
   - En problemas de clasificación es común trabajar con la idea de entropía cruzada, una noción que permite analizar la información entre instancias para lograr separar correctamente los distintos grupos de interés.
-  - Muchas veces al trabajar con audio se definen métricas que tienen en cuenta nociones perceptuales, como se imaginarán este trabajo no va a ser la excepción.
+  - Muchas veces al trabajar con audio se definen métricas que tienen en cuenta nociones perceptuales; como se imaginarán este trabajo no va a ser la excepción.
 
-Una vez que tenemos clara cuál es la función de costo que queremos optimizar surge otra pregunta interesante ¿qué hacemos con esta información? Al estudiar el error de  las predicciones sobre las distintas instancias de nuestro cuerpo de datos de entrenamiento ganamos una noción de qué tan lejos está nuestro modelo de cumplir con la tarea para la cual lo estamos entrenando, o, en realidad, de minimizar la función que propusimos. Esta salvedad es importante, porque si elegimos mal la función a optimizar podemos obtener errores bajísimos y el modelo puede ser pésimo para cumplir la tarea que nos interesa. Entonces, retomando nuevamente, si al estudiar el valor de la función de costo sobre nuestros datos encontramos que esta es elevada, significa que el conjunto de parámetros $\gamma$ de nuestro modelo no es correcto y necesita ser modificado para lograr el objetivo propuesto, esto dispara otra pregunta ¿cómo acualizo los parámetros del modelo? Esto se logra mediante un algoritmo conocido como propagación hacia atrás (usualmente conocido como *backpropagation*, en inglés). Es, en pocas palabras, una implementación muy eficiente de la regla de la cadena, que permite propagar los errores en la predicción sobre todo el modelo, buscando a partir de esos gradientes llegar a un mínimo de la función de costos propuesta. Una vez que se propagó el error y se modificaron los parámetros del sistema en consecuencia, se repite el proceso. Esto es a lo que llamamos ciclo de entrenamiento, y termina cuando se cumple una cantidad de iteraciones (conocidas como *epochs* o *épocas*) definidas por el usuario o si se cumple alguna condición también definida por el usuario. Un esquema de todo esto se puede ver a continuación:
+Una vez que tenemos clara cuál es la función de costo que queremos optimizar surge otra pregunta interesante, ¿qué hacemos con esta información? Al estudiar el error de  las predicciones sobre las distintas instancias de nuestro cuerpo de datos de entrenamiento ganamos una noción de qué tan lejos está nuestro modelo de cumplir con la tarea para la cual lo estamos entrenando, o, en realidad, de minimizar la función que propusimos. Esta salvedad es importante, porque si elegimos mal la función a optimizar podemos obtener errores bajísimos y el modelo puede ser pésimo para cumplir la tarea que nos interesa. Entonces, retomando, si al estudiar el valor de la función de costo sobre nuestros datos encontramos que esta es elevada, significa que el conjunto de parámetros $\gamma$ de nuestro modelo no es correcto y necesita ser modificado para lograr el objetivo propuesto. Esto dispara otra pregunta ¿cómo acualizo los parámetros del modelo? Mediante un algoritmo conocido como propagación hacia atrás (usualmente conocido como *backpropagation*, en inglés). Es, en pocas palabras, una implementación muy eficiente de la regla de la cadena, que permite propagar los errores en la predicción sobre todo el modelo, buscando a partir de esos gradientes llegar a un mínimo de la función de costos propuesta. Una vez que se propagó el error y se modificaron los parámetros del sistema en consecuencia, se repite el proceso. Esto es a lo que llamamos ciclo de entrenamiento, y termina cuando se cumple una cantidad de iteraciones (conocidas como *epochs* o *épocas*) definidas por el usuario o si se cumple alguna condición también definida por el usuario. Un esquema de todo esto se puede ver a continuación:
 
 ![Esquema del ciclo de entrenamiento](./imgs/loop_entrenamiento.png "Esquema del ciclo de entrenamiento")
 
@@ -71,25 +71,25 @@ El orden de las tareas que deberían llevar a cabo es:
 
 El desarrollo de su trabajo tiene que verse en un informe que siga el formato propuesto (en [Word](https://docs.google.com/document/d/1XwUWKWTRPKlJPzpGfd20riz-uNmUvYBx/edit?usp=drive_link&ouid=109118869525257004528&rtpof=true&sd=true) o en [LaTex](https://drive.google.com/file/d/12xZTOi8-OQKFwEuPdAjPenD1G1w3OghP/view?usp=drive_link)), cumpliendo con todas las secciones que en él se detallan. 
 
-Es muy importante que hagan este trabajo con mucho tiempo, además de la dificultad que presenta el problema planteado, muchas de las etapas son computacionalmente intensas, por lo que el proceso de pruebas va a ser largo y algo tedioso. Definitivamente no es un trabajo para hacer en un par de días (es literalmente imposible).
+Es muy importante que hagan este trabajo con mucho tiempo, además de la dificultad que presenta el problema planteado, muchas de las etapas son computacionalmente intensas, por lo que el proceso de pruebas va a ser largo y algo tedioso. Definitivamente no es un trabajo para hacer en un par de días (es, literalmente, imposible).
 
 ## Condiciones para la entrega
 
 El trabajo puede realizarse en grupos de hasta 4 personas. Además de la entrega del trabajo completo se les pide una pre-entrega, que corresponde a una versión parcial del trabajo (secciones de Introducción, Marco teórico y Desarrollo experimental). No es necesario adjuntar código en esta etapa.
 
-La fecha de la pre-entrega es el **xx de xxxx**, mientras que la fecha de la entrega final es el **xx de xxxx**. No se aceptarán entregas finales fuera de esta fecha y entregas parciales fuera de término serán penalizadas con **x** puntos cada **x** días de entrega tarde.
+La fecha de la pre-entrega es el **17 de mayo**, mientras que la fecha de la entrega final es el **19 de junio**. No se aceptarán entregas finales fuera de esta fecha y entregas parciales fuera de término serán penalizadas con **1** punto por cada día de entrega tarde.
 
 ## Referencias
 
-[1] Chowning, J. M. (1977). The Synthesis of Complex Audio Spectra by Means of Frequency Modulation. Computer Music Journal, 1(2), 46–54. http://www.jstor.org/stable/23320142 [LINK]
+[1] Chowning, J. M. (1977). The Synthesis of Complex Audio Spectra by Means of Frequency Modulation. Computer Music Journal, 1(2), 46–54. http://www.jstor.org/stable/23320142 [LINK](https://web.eecs.umich.edu/~fessler/course/100/misc/chowning-73-tso.pdf)
 
-[2] Sean L. (2021). Computational Music Synthesis, first edition, available for free at http://cs.gmu.edu/∼sean/book/synthesis/ [LINK]
+[2] Sean L. (2021). Computational Music Synthesis, first edition, available for free at http://cs.gmu.edu/∼sean/book/synthesis/ 
 
 [3] Géron, A. (2019). Hands-on machine learning with Scikit-Learn, Keras and TensorFlow: concepts, tools, and techniques to build intelligent systems (2nd ed.). O’Reilly. 
 
-[4] Caspe, F., McPherson, A., & Sandler, M. (2022). DDX7: Differentiable FM Synthesis of Musical Instrument Sounds. Proceedings of the 23rd International Society for Music Information Retrieval Conference. [LINK]
+[4] Caspe, F., McPherson, A., & Sandler, M. (2022). DDX7: Differentiable FM Synthesis of Musical Instrument Sounds. Proceedings of the 23rd International Society for Music Information Retrieval Conference. [LINK](https://arxiv.org/pdf/2208.06169)
 
-[5] Engel, J, Hantrakul, L.H., Gu, C. & Roberts, A. (2020). DDSP: Differentiable Digital Signal Processing. Proceedings of the 8th International Conference on Learning Representations. [LINK]
+[5] Engel, J, Hantrakul, L.H., Gu, C. & Roberts, A. (2020). DDSP: Differentiable Digital Signal Processing. Proceedings of the 8th International Conference on Learning Representations. [LINK](https://arxiv.org/pdf/2001.04643)
 
 
 
