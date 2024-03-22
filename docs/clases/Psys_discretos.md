@@ -22,4 +22,4 @@
 
 [Archivos](https://drive.google.com/file/d/1dqvLvwzflB6mPzlbmWmSarZeVQqW-q1-/view?usp=drive_link)
 
-
+[Resolución](https://drive.google.com/file/d/1nyztfl3LH3mpykelvP8EoysaygVLSpdn/view?usp=drive_link)
