@@ -1,0 +1,10 @@
+mkdocs
+pymdown-extensions
+Jinja2>=2.11.1
+# Mkdocs plugins
+mkdocs-material-extensions
+mkdocs_pymdownx_material_extras
+mkdocs-git-authors-plugin
+mkdocs-git-revision-date-localized-plugin
+mkdocs-glightbox
+mkdocs-macros-plugin
