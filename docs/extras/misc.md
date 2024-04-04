@@ -8,10 +8,6 @@
 
 [Digital Signal Processing - Oppenheim (en inglés)](https://www.youtube.com/watch?v=rkvEM5Y3N60&list=PL8157CA8884571BA2)
 
-#### Introducción a Git y GitHub
-
-<iframe src="docs/extras/introduccion_git_github.pdf" width="640" height="480" allow="autoplay"></iframe>
-
 ### Videos
 
 [¿Qué es la Transformada de Fourier? Una introducción visual](https://www.youtube.com/watch?v=h4PTucW3Rm0)
@@ -24,6 +20,14 @@
 [Python para el Pueblo - Bosio y Curutchet (muy recomendado)](https://drive.google.com/file/d/1XlFFCRuQ4TR10ULoUzaVyZmigO6iDCac/view?usp=sharing)
 
 [Think Python - Downey](https://greenteapress.com/thinkpython2/thinkpython2.pdf)
+
+### Introducción a Git y GitHub
+
+<iframe src="docs/extras/introduccion_git_github.pdf" width="640" height="480" allow="autoplay"></iframe>
+
+[Git and GitHub for Beginners - Crash Course](https://youtu.be/RGOj5yH7evk?si=obeiId0dPFlKvhv2)
+
+[Git y Github | Curso Práctico de Git y Github Desde Cero](https://www.youtube.com/watch?v=HiXLkL42tMU&ab_channel=Fazt)
 
 ### Cursos
 
