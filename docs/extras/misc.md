@@ -23,7 +23,7 @@
 
 ### Introducción a Git y GitHub
 
-<iframe src="docs/extras/introduccion_git_github.pdf" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1fmXX0xdYfU8Fp1VApdYaWXpXjTEUMYeN/view?usp=sharing" width="640" height="480" allow="autoplay"></iframe>
 
 [Git and GitHub for Beginners - Crash Course](https://youtu.be/RGOj5yH7evk?si=obeiId0dPFlKvhv2)
 
