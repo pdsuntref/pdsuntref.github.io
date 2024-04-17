@@ -4,11 +4,11 @@
 
 La síntesis FM es una técnica de generación de audio surgida en la década de los 60's basada, como su nombre lo indica, en técnicas de modulación en frecuencia. A grandes rasgos, esta técnica está basada en dos grandes bloques: un oscilador que funciona como modulador, y un segundo oscilador que funciona como señal portadora. La idea del método consiste en que la frecuencia instantánea de la señal portadora es modificada según la amplitud de la señal modulante, como se puede ver en la figura:
 
-[DIAGRAMA ESQUEMATICO MODULACIÓN FM - TIEMPO]
+![Modulación FM en el dominio del tiempo](./imgs/fm_tiempo.png "Efecto de la modulación FM en el dominio del tiempo")
 
 En frecuencia, dependiendo de cómo sea la relación entre los períodos de las dos señales con las que estamos operando, los armónicos generados respetarán, valga la redundancia, una relación armónica. Si en cambio los períodos de las señales propuestas no cumplen esta proporción, se generarán sonidos inarmonicos, lo cual permite la síntesis de sonidos percusivos.
 
-[GRÁFICOS DE LOS ESPECTROS EN FRECUENCIA PARA CADA CASO]
+![Modulación FM en el dominio de la frecuencia](./imgs/fm_frec.png "Efecto en frecuencia de la modulación FM")
 
 Información más detallada sobre el método está disponible en las referencias [1] y [2] (capítulo sobre síntesis FM únicamente).
 
