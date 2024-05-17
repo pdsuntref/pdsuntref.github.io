@@ -62,10 +62,12 @@ La idea del trabajo es que completen los distintos scripts siguiendo las ideas d
 El orden de las tareas que deberían llevar a cabo es:
 
   - A partir del archivo *requirements.txt* incluido en el esqueleto, generar un entorno de conda para poder tener instaladas las librerías necesarias para el trabajo. Si llegan a necesitar otras librerías, avisen. Esto lo pueden hacer con el comando *conda install --file requirements.txt*
-  - Completar las funciones en *spectral_ops.py* dentro de la carpeta *ddx7*. Comprobar su correcto funcionamiento y luego generar los datos corriendo el archivo *create_data.py* en la carpeta *dataset*. 
-  - Completar las funciones de costo en *loss_functions.py*, dentro de la carpeta *ddx7*.
+  - En la carpeta *tp_esqueleto* que les pasamos, copien la carpeta *Dataset_URMP*.
+  - Completar las funciones en *spectral_ops.py* dentro de la carpeta *ddx7*. Comprobar su correcto funcionamiento (ver archivos en la carpeta *tests_spectral_ops*, dentro de la carpeta *ddx7*) y luego generar los datos corriendo el archivo *create_data.py* en la carpeta *dataset*. 
+  - Completar las STFT multiresolución en *core.py*, dentro de la carpeta *ddx7*.
   - Completar la función de síntesis FM en *core.py*, dentro de la carpeta *ddx7*.
-  - Entrenar el modelo ejecutando *train.py*. Esto puede tardar mucho, tengan paciencia. Una vez que termine, escuchen los archivos generados en la carpeta *xx* y verifiquen que tengan sentido.
+  - Entrenar el modelo ejecutando *train.py*. 
+  - Si todo corrió bien, borren las carpetas que se generaron en la carpeta *dataset* cuando corrieron *create_data.py*, muevan las carpetas que están en la carpeta *dataset_full* a la carpeta *Dataset_URMP* y repitan todo el proceso (corran *create_data.py*, entrenen el modelo con *train.py*). **Atención**: esto puede tardar **mucho**, en el orden de días, no teman y tengan paciencia.
   - Empezar a proponer pruebas, ¿qué pasa si cambio la función de costo? ¿y si modifico el algoritmo para encontrar la frecuencia fundamental del audio? ¿la ponderación A propuesta en el cálculo de loudness aporta algo útil? Vayan cambiando bloques del modelo y entrenando distintas versiones, estudiando cómo varían los resultados en cada una de ellas. Propongan alguna métrica que permita analizar qué tan parecida es la señal estimada por el sistema a la señal de referencia.
   - Escriban el informe, dándole especial atención al análisis de los resultados obtenidos en las distintas pruebas que realicen.
 
