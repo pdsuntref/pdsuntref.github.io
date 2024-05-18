@@ -53,9 +53,11 @@ El esquema general del modelo propuesto por Caspe se puede ver a continuación:
 
 ![Arquitectura del modelo DDX7, en rojo el cálculo de pitch, loudness, el algorítmo de síntesis FM y la función de costo](./imgs/arquitectura.png "Arquitectura del modelo DDX7 y bloques sobre los que se trabajará (en rojo)")
 
-de todo el modelo, solo deben modificar los bloques sombreados en rojo. Además de este enunciado les proporcionamos un esqueleto del código [LINK AL ESQUELETO - próximamente], con la parte relacionada a la parte de aprendizaje automático resuelta. Como mencionamos antes, no es necesario que sepan nada de ese campo para realizar este trabajo, solo conceptos a gran escala.
+de todo el modelo, solo deben modificar los bloques sombreados en rojo. Además de este enunciado les proporcionamos un [esqueleto del código](https://github.com/pdsuntref/ddx7-template), con la parte relacionada a la parte de aprendizaje automático resuelta. Como mencionamos antes, no es necesario que sepan nada de ese campo para realizar este trabajo, solo conceptos a gran escala.
 
-En el caso de este trabajo nos concentraremos en la emulación de sonidos de violín únicamente, les dejamos los datos necesarios para el entrenamiento del modelo [LINK A DATASET - próximamente].
+En el caso de este trabajo nos concentraremos en la emulación de sonidos de violín únicamente, les dejamos los datos necesarios para el entrenamiento del modelo:
+- Para probar que las funciones que implementaron se ejecutan correctamente: [DatasetURMP](https://drive.google.com/drive/folders/1tu5-rpUMGE9BfsPXGD80qV_xPPueaxy1).
+- Para entrenar el model final: [dataset_full](https://drive.google.com/drive/folders/1NSMF7oC5T0zei1AnticsQKJR1LXO5ApS)
 
 La idea del trabajo es que completen los distintos scripts siguiendo las ideas del trabajo de Caspe, variaciones de ellas o ideas propias. Es muy importante que respeten los tipos de dato y las cantidades de variables de entrada y salida que se especifican en cada parte del esqueleto; todo está documentado, pero ante la duda consulten antes de dar cosas por sentado.
 
