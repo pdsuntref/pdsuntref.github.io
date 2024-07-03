@@ -1999,10 +1999,12 @@
 <p>El orden de las tareas que deberían llevar a cabo es:</p>
 <ul>
 <li>A partir del archivo <em>requirements.txt</em> incluido en el esqueleto, generar un entorno de conda para poder tener instaladas las librerías necesarias para el trabajo. Si llegan a necesitar otras librerías, avisen. Esto lo pueden hacer con el comando <em>conda install &ndash;file requirements.txt</em></li>
-<li>Completar las funciones en <em>spectral_ops.py</em> dentro de la carpeta <em>ddx7</em>. Comprobar su correcto funcionamiento y luego generar los datos corriendo el archivo <em>create_data.py</em> en la carpeta <em>dataset</em>. </li>
-<li>Completar las funciones de costo en <em>loss_functions.py</em>, dentro de la carpeta <em>ddx7</em>.</li>
+<li>En la carpeta <em>tp_esqueleto</em> que les pasamos, copien la carpeta <em>Dataset_URMP</em>.</li>
+<li>Completar las funciones en <em>spectral_ops.py</em> dentro de la carpeta <em>ddx7</em>. Comprobar su correcto funcionamiento (ver archivos en la carpeta <em>tests_spectral_ops</em>, dentro de la carpeta <em>ddx7</em>) y luego generar los datos corriendo el archivo <em>create_data.py</em> en la carpeta <em>dataset</em>. </li>
+<li>Completar las STFT multiresolución en <em>core.py</em>, dentro de la carpeta <em>ddx7</em>.</li>
 <li>Completar la función de síntesis FM en <em>core.py</em>, dentro de la carpeta <em>ddx7</em>.</li>
-<li>Entrenar el modelo ejecutando <em>train.py</em>. Esto puede tardar mucho, tengan paciencia. Una vez que termine, escuchen los archivos generados en la carpeta <em>xx</em> y verifiquen que tengan sentido.</li>
+<li>Entrenar el modelo ejecutando <em>train.py</em>. </li>
+<li>Si todo corrió bien, borren las carpetas que se generaron en la carpeta <em>dataset</em> cuando corrieron <em>create_data.py</em>, muevan las carpetas que están en la carpeta <em>dataset_full</em> a la carpeta <em>Dataset_URMP</em> y repitan todo el proceso (corran <em>create_data.py</em>, entrenen el modelo con <em>train.py</em>). <strong>Atención</strong>: esto puede tardar <strong>mucho</strong>, en el orden de días, no teman y tengan paciencia.</li>
 <li>Empezar a proponer pruebas, ¿qué pasa si cambio la función de costo? ¿y si modifico el algoritmo para encontrar la frecuencia fundamental del audio? ¿la ponderación A propuesta en el cálculo de loudness aporta algo útil? Vayan cambiando bloques del modelo y entrenando distintas versiones, estudiando cómo varían los resultados en cada una de ellas. Propongan alguna métrica que permita analizar qué tan parecida es la señal estimada por el sistema a la señal de referencia.</li>
 <li>Escriban el informe, dándole especial atención al análisis de los resultados obtenidos en las distintas pruebas que realicen.</li>
 </ul>
@@ -2037,7 +2039,7 @@
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 17, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 17, 2024</span>
   </span>
 
     

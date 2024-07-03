@@ -18,3 +18,4 @@
 
 <iframe src="https://drive.google.com/file/d/1tiDiPzeTKTlqbTho5QEs3_vVECBnRpNA/preview" width="640" height="480" allow="autoplay"></iframe>
 
+[Resolución](https://drive.google.com/file/d/12VNxis3CVHhvhqLqQtS0tWTNtmEm7YqV/view?usp=drive_link)

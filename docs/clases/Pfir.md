@@ -12,4 +12,4 @@
 
 <iframe src="https://drive.google.com/file/d/1NvPva-u4-6uzkep8JFjimDIYyDWiOUQE/preview" width="640" height="480" allow="autoplay"></iframe>
 
-
+[Resolución](https://drive.google.com/file/d/1pIGOIDdR8HN8HIPeDYnJRuJwrAA73w9B/view?usp=drive_link)
