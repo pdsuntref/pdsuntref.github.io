@@ -95,6 +95,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#estimación-de-dirección-de-arribo-de-fuentes-sonoras" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -1472,6 +1477,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Trabajo Práctico
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1482,6 +1500,61 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#perspectiva-histórica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perspectiva histórica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-tp" class="md-nav__link">
+    <span class="md-ellipsis">
+      El TP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condiciones-para-la-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condiciones para la entrega
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1791,6 +1864,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#perspectiva-histórica" class="md-nav__link">
+    <span class="md-ellipsis">
+      Perspectiva histórica
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#el-tp" class="md-nav__link">
+    <span class="md-ellipsis">
+      El TP
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#condiciones-para-la-entrega" class="md-nav__link">
+    <span class="md-ellipsis">
+      Condiciones para la entrega
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Referencias
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1805,9 +1924,54 @@
                   
 
 
-  <h1>Trabajo Práctico</h1>
-
-<p><em>Próximamente</em></p>
+<h1 id="estimación-de-dirección-de-arribo-de-fuentes-sonoras">Estimación de dirección de arribo de fuentes sonoras<a class="headerlink" href="#estimación-de-dirección-de-arribo-de-fuentes-sonoras" title="Permanent link">#</a></h1>
+<h2 id="perspectiva-histórica">Perspectiva histórica<a class="headerlink" href="#perspectiva-histórica" title="Permanent link">#</a></h2>
+<p>Imagínense que son franceses combatiendo en la primera guerra mundial. El Archiduque Ferdinando fue asesinado, intensificando el desequilibrio entre las relaciones diplomáticas de las grandes potencias de la época: los imperios Austro-Húngaro, Alemán, Británico y Ruso, además de Francia. En el medio de la feroz guerra de trincheras había surgido una nueva amenaza para la supervivencia, el ataque aéreo por parte de los zeppellines alemanes. En una situación así solo cabía razonar qué herramientas había disponibles para poder predecir de dónde podía provenir el siguiente ataque. Esperar a una identificación visual de la amenaza no era una opción válida, sería demasiado tarde. La alternativa que quedaba tenía que ver con otro de nuestros sentidos, la audición. Si estuviéramos en una habitación con los ojos cerrados y alguien hablara podríamos intuir de dónde viene la fuente a partir de las diferencias espectrales y de tiempo de arribo de la señal sonora a cada una de nuestros oídos. Extrapolando de forma algo irresponsable uno podría pensar que si puedo identificar la dirección de arribo de una fuente &ldquo;chica&rdquo; con sensores &ldquo;chicos&rdquo;, podría lograr algo análogo para una fuente de porte mucho mayor usando sensores más grandes. Efectivamente es lo que pasó, llegando a sistemas como el que se ven a continuación:</p>
+<p><a class="glightbox" href="imgs/doa_tubas.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tubas de guerra, primera guerra mundial" src="imgs/doa_tubas.jpg" title="Tubas de guerra, primera guerra mundial" /></a></p>
+<p>El desarrollo de este campo de estudio no se detuvo aquí, y a lo largo de los años surgieron varios algoritmos que permiten determinar de forma precisa localizaciones espaciales de fuentes a partir de un número reducido de sensores (bastante) más convencionales que los mencionados anteriormente. </p>
+<h2 id="el-tp">El TP<a class="headerlink" href="#el-tp" title="Permanent link">#</a></h2>
+<p>Las técnicas de estimación de arribo apuntan a, justamente, estimar la dirección de arribo de la señal sonora a los distintos sensores. Esto es sutilmente distinto a estimar la localización de la fuente, en donde buscamos determinar de forma precisa la posición (x,y,z) de la fuente en el espacio. Si la fuente sonora está localizada en el campo cercano, además de la dirección de arribo será posible determinar la distancia entre esta y los sensores. Esto es lo que buscaremos en este trabajo práctico, en donde estimaremos el ángulo azimuthal de la fuente en cuestión y su distancia a los distintos sensores. Suponiendo que contamos con, por ejemplo, 3 micrófonos equiespaciados, el experimento queda representado por el siguiente diagrama:</p>
+<p><a class="glightbox" href="imgs/doa_sensores.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Esquema DOA, N sensores equiespaciados" src="imgs/doa_sensores.png" title="Esquema DOA, 3 sensores equiespaciados" /></a></p>
+<p>en donde <span class="arithmatex">\(s(t)\)</span> representa la fuente cuya dirección se busca estimar en función del tiempo, <span class="arithmatex">\(y_n(t)\)</span> es la señal grabada por el enésimo sensor, <span class="arithmatex">\(r_n\)</span> la distancia entre la fuente y el sensor <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(\phi_n\)</span> es el ángulo incidente y <span class="arithmatex">\(d\)</span> es la distancia entre micrófonos.</p>
+<p>Obviamente, las distancias y los ángulos entre los sensores y la fuente son desconocidos, sino no habría mucho que discutir. Como casi siempre, hay una solución para este problema. Si conocemos las diferencias en los tiempos de arribo (TDOA, por las siglas en inglés) de las señales a cada micrófono, podemos estimar todas las variables que nos faltan. La TDOA entre los sensores 1 y 2 de nuestro ejemplo viene dada por:</p>
+<div class="arithmatex">\[ \tau_{1,2} = \frac{r_2-r_1}{c} \]</div>
+<p>en donde <span class="arithmatex">\(c\)</span> corresponde a la velocidad de propagación del sonido en aire.</p>
+<p>Por otro lado, la TDOA entre los sensores 1 y 3 es:</p>
+<div class="arithmatex">\[ \tau_{1,3} = \frac{r_3-r_1}{c} \]</div>
+<p>Por otro lado, usando trigonometría sabemos que:</p>
+<div class="arithmatex">\[ r_2^2 = r_1^2 + d^2 + 2r_1\;\cos(\phi_1) \]</div>
+<p>Análogamente:</p>
+<div class="arithmatex">\[ r_3^2 = r_1^2 + 4d^2 + 4r_1\;\cos(\phi_1) \]</div>
+<p>Ahora bien, los sensores son colocados por el usuario, así que una vez que se define la geometría del arreglo de micrófonos <span class="arithmatex">\(d\)</span> es un dato medible. Si podemos estimar de alguna forma <span class="arithmatex">\(\tau_{1,2}\)</span> y <span class="arithmatex">\(\tau_{1,3}\)</span>, usando las ecuaciones que acabamos de presentar podemos calcular las incógnitas <span class="arithmatex">\(r_1\)</span>, <span class="arithmatex">\(r_2\)</span>, <span class="arithmatex">\(r_3\)</span> y <span class="arithmatex">\(\phi_1\)</span>. Aplicando nuevamente trigonometría podemos estimar <span class="arithmatex">\(\phi_2\)</span> y <span class="arithmatex">\(\phi_3\)</span>, y, como se imaginarán este esquema de trabajo es extrapolable a un número arbitrario de sensores. Todo es calculable si conocemos, o estimamos, los TDOA. Es en este punto en donde nos vamos a centrar en el trabajo práctico.</p>
+<p>La propuesta es que estimen las diferencias en tiempos de arribo mediante distintas técnicas: correlación cruzada clásica y su versión generalizada (con las distintas variantes que recaen dentro de esta versión). Como referencias, recomendamos el capítulo 9 de [1] y el trabajo de Knapp y CLifford [2], pero pueden extender esto si lo consideran pertinente. El array de sensores que deben proponer es de 4 micrófonos dispuestos linealmente con una separación de 10 cm entre ellos.</p>
+<p>La implementación de los algoritmos propuestos es muy sencilla, por lo que la parte más interesante del trabajo recaerá en el análsis que hagan de los resultados que obtengan. Algunas preguntas interesantes que deberían hacerse son:</p>
+<ul>
+<li>¿Da lo mismo usar un micrófono solo o un arreglo?</li>
+<li>¿Es lo mismo hacer el experimento en una sala anecoica que en una normal? ¿Qué parámetros acústicos sería interesante estudiar en este último caso?</li>
+<li>¿Hay diferencias en cuanto a tiempo de cómputo entre trabajar con la correlación cruzada en el dominio temporal y usar la versión generalizada de la correlacion cruzada?</li>
+<li>¿En qué tipo de sistemas de coordenadas conviene trabajar, cartesianas, esféricas?</li>
+</ul>
+<p>En cuanto a la evaluación de los algoritmos, deberían tener en cuenta los siguientes aspectos:</p>
+<ul>
+<li>Error en función del ángulo de elevación de la fuente.</li>
+<li>Error en función de la distancia entre la fuente y los sensores.</li>
+<li>Error en función de la separación entre micrófonos.</li>
+<li>Error en función de la cantidad de micrófonos del arreglo.</li>
+<li>Error en función de parámetros acústicos del recinto real.</li>
+<li>Error en función de parámetros elegidos al hacer la medición, como la frecuencia de muestreo.</li>
+<li>Otros tipos de análsis que se les ocurran.</li>
+</ul>
+<p>En líneas generales, el desarrollo del trabajo tiene tres etapas:
+  -  Simulación de recintos, arrays de micrófonos y fuente con pyroomacoustics, EASE, o el software que prefieran. Acá se deberían contemplar variaciones de los parámetros que les permitirán evaluar sus algoritmos sobre las distintas situaciones propuestas.
+  -  Desarrollo de los algoritmos de TDAO y DAO.
+  -  Evaluación de los algoritmos sobre las simulaciones generadas.</p>
+<p>El desarrollo de su trabajo tiene que verse reflejado en un informe que siga el formato propuesto (en <a href="https://docs.google.com/document/d/1XwUWKWTRPKlJPzpGfd20riz-uNmUvYBx/edit?usp=drive_link&amp;ouid=109118869525257004528&amp;rtpof=true&amp;sd=true">Word</a> o en <a href="https://drive.google.com/file/d/12xZTOi8-OQKFwEuPdAjPenD1G1w3OghP/view?usp=drive_link">LaTex</a>), cumpliendo con todas las secciones que en él se detallan. </p>
+<h2 id="condiciones-para-la-entrega">Condiciones para la entrega<a class="headerlink" href="#condiciones-para-la-entrega" title="Permanent link">#</a></h2>
+<p>El trabajo puede realizarse en grupos de hasta 4 personas. Además de la entrega del trabajo completo se les pide una pre-entrega, que corresponde a una versión parcial del trabajo (secciones de Introducción, Marco teórico y Desarrollo experimental). También deben entregar el código correspondiente a las simulaciones acústicas y a los algoritmos de estimación de DOA y TDOA.</p>
+<p>La fecha de la pre-entrega es el <strong>11 de junio</strong>, mientras que la fecha de la entrega final es el <strong>30 de junio</strong>. No se aceptarán entregas finales fuera de esta fecha (recuerden que el trabajo práctico es condición de aprobación de la cursada)</p>
+<h2 id="referencias">Referencias<a class="headerlink" href="#referencias" title="Permanent link">#</a></h2>
+<p>[1] Microphone Array Signal Processing. (2008). En Springer Topics in Signal Processing. Springer Berlin Heidelberg. <a href="https://doi.org/10.1007/978-3-540-78612-2">https://doi.org/10.1007/978-3-540-78612-2</a> <a href="https://drive.google.com/file/d/1zdFp_y5iELllENNXtSrRlrsap6-taXVE/view?usp=sharing">LINK</a></p>
+<p>[2] Knapp, C., &amp; Carter, G. (1976). The generalized correlation method for estimation of time delay. IEEE Transactions on Acoustics, Speech, and Signal Processing, 24(4), 320–327. <a href="https://doi.org/10.1109/tassp.1976.1162830">https://doi.org/10.1109/tassp.1976.1162830</a> <a href="https://drive.google.com/file/d/1Y8QgWWNszJjTPhN6HyyN7iHceYvJpyRc/view?usp=sharing">LINK</a></p>
 
 
 
@@ -1828,7 +1992,7 @@
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 9, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 20, 2025</span>
   </span>
 
     
