@@ -10,31 +10,25 @@ El desarrollo de este campo de estudio no se detuvo aquí, y a lo largo de los a
 
 ## El TP
 
-Las técnicas de estimación de arribo apuntan a, justamente, estimar la dirección de arribo de la señal sonora a los distintos sensores. Esto es sutilmente distinto a estimar la localización de la fuente, en donde buscamos determinar de forma precisa la posición (x,y,z) de la fuente en el espacio. Si la fuente sonora está localizada en el campo cercano, además de la dirección de arribo será posible determinar la distancia entre esta y los sensores. Esto es lo que buscaremos en este trabajo práctico, en donde estimaremos el ángulo azimuthal de la fuente en cuestión y su distancia a los distintos sensores. Suponiendo que contamos con, por ejemplo, 3 micrófonos equiespaciados, el experimento queda representado por el siguiente diagrama:
+Las técnicas de estimación de arribo apuntan a, justamente, estimar la dirección de arribo de la señal sonora a los distintos sensores. Esto es sutilmente distinto a estimar la localización de la fuente, en donde buscamos determinar de forma precisa la posición (x,y,z) de la fuente en el espacio. Si la fuente sonora está localizada en el campo lejano, usando trigonometría es posible determinar la dirección de arribo. Esto es lo que buscaremos en este trabajo práctico, en donde estimaremos el ángulo azimuthal de la fuente en cuestión y su distancia a los distintos sensores. Suponiendo que contamos con, por ejemplo, 2 micrófonos equiespaciados, el experimento queda representado por el siguiente diagrama:
 
-![Esquema DOA, N sensores equiespaciados](./imgs/doa_sensores.png "Esquema DOA, 3 sensores equiespaciados")
+![Esquema DOA, 2 sensores equiespaciados](./imgs/doa_sensores1.png "Esquema DOA, 2 sensores equiespaciados")
 
-en donde $s(t)$ representa la fuente cuya dirección se busca estimar en función del tiempo, $y_n(t)$ es la señal grabada por el enésimo sensor, $r_n$ la distancia entre la fuente y el sensor $n$, $\phi_n$ es el ángulo incidente y $d$ es la distancia entre micrófonos.
+en donde $s(k)$ representa la fuente cuya dirección se busca estimar en función del tiempo, $y_n(t)$ es la señal grabada por el enésimo sensor, $\theta_n$ es el ángulo incidente y $d$ es la distancia entre micrófonos.
 
-Obviamente, las distancias y los ángulos entre los sensores y la fuente son desconocidos, sino no habría mucho que discutir. Como casi siempre, hay una solución para este problema. Si conocemos las diferencias en los tiempos de arribo (TDOA, por las siglas en inglés) de las señales a cada micrófono, podemos estimar todas las variables que nos faltan. La TDOA entre los sensores 1 y 2 de nuestro ejemplo viene dada por:
+Tomemos el sensor de la derecha como nuestra referencia. Siempre y cuando el frente de onda incidente sea plano, el tiempo que tarda la señal en llegar al sensor 2 se puede calcular aplicando trigonometría, puntualmente mediante la siguiente expresión:
 
-$$ \tau_{1,2} = \frac{r_2-r_1}{c} $$
+$$ \tau_{1,2} = \frac{d\;cos(\theta}{c} $$
 
-en donde $c$ corresponde a la velocidad de propagación del sonido en aire.
+en donde $\tau_{1,2}$ refiere al retardo temporal entre las señales captadas por ambos micrófonos.
 
-Por otro lado, la TDOA entre los sensores 1 y 3 es:
+Tranquilamente podríamos extender estas ideas a un arreglo de $N$ sensores, como se ve en este diagrama:
 
-$$ \tau_{1,3} = \frac{r_3-r_1}{c} $$
+![Esquema DOA, N sensores equiespaciados](./imgs/doa_sensores2.png "Esquema DOA, N sensores equiespaciados")
 
-Por otro lado, usando trigonometría sabemos que:
+en este caso, se agrega una señal que no aparecía en el caso anterior, $v_n(k)$, que denota el ruido presente en las grabaciones.
 
-$$ r_2^2 = r_1^2 + d^2 + 2r_1\;\cos(\phi_1) $$
-
-Análogamente:
-
-$$ r_3^2 = r_1^2 + 4d^2 + 4r_1\;\cos(\phi_1) $$
-
-Ahora bien, los sensores son colocados por el usuario, así que una vez que se define la geometría del arreglo de micrófonos $d$ es un dato medible. Si podemos estimar de alguna forma $\tau_{1,2}$ y $\tau_{1,3}$, usando las ecuaciones que acabamos de presentar podemos calcular las incógnitas $r_1$, $r_2$, $r_3$ y $\phi_1$. Aplicando nuevamente trigonometría podemos estimar $\phi_2$ y $\phi_3$, y, como se imaginarán este esquema de trabajo es extrapolable a un número arbitrario de sensores. Todo es calculable si conocemos, o estimamos, los TDOA. Es en este punto en donde nos vamos a centrar en el trabajo práctico.
+Ahora bien, los sensores son colocados por el usuario, así que una vez que se define la geometría del arreglo de micrófonos $d$ es un dato medible. Si podemos estimar de alguna forma los $\tau$ entre micrófonos, usando la ecuación que acabamos de presentar podemos calcular las incógnitas $\theta_n$ para cada uno de los sensores. Promediando estos ángulos, obtendríamos el ángulo del arreglo con respecto a la fuente, es decir, estaríamos estimando el ángulo entre el centro del arreglo y la fuente. Entonces, el problema de estimación de dirección de arribo (DOA, por sus siglas en inglés) es en realidad un problema de estimación de tiempos de arribo (TDOA, por sus siglas en inglés). Todo es calculable si conocemos, o estimamos, los TDOA. Es en este punto en donde nos vamos a centrar en el trabajo práctico.
 
 La propuesta es que estimen las diferencias en tiempos de arribo mediante distintas técnicas: correlación cruzada clásica y su versión generalizada (con las distintas variantes que recaen dentro de esta versión). Como referencias, recomendamos el capítulo 9 de [1] y el trabajo de Knapp y CLifford [2], pero pueden extender esto si lo consideran pertinente. El array de sensores que deben proponer es de 4 micrófonos dispuestos linealmente con una separación de 10 cm entre ellos.
 
@@ -50,15 +44,19 @@ En cuanto a la evaluación de los algoritmos, deberían tener en cuenta los sigu
   -  Error en función del ángulo de elevación de la fuente.
   -  Error en función de la distancia entre la fuente y los sensores.
   -  Error en función de la separación entre micrófonos.
-  -  Error en función de la cantidad de micrófonos del arreglo.
+  -  Error en función de la cantidad de micrófonos del arreglo. (para este punto y el anterior, referirse al capítulo 3 de [1]).
   -  Error en función de parámetros acústicos del recinto real.
   -  Error en función de parámetros elegidos al hacer la medición, como la frecuencia de muestreo.
   -  Otros tipos de análsis que se les ocurran.
 
 En líneas generales, el desarrollo del trabajo tiene tres etapas:
   -  Simulación de recintos, arrays de micrófonos y fuente con pyroomacoustics, EASE, o el software que prefieran. Acá se deberían contemplar variaciones de los parámetros que les permitirán evaluar sus algoritmos sobre las distintas situaciones propuestas.
-  -  Desarrollo de los algoritmos de TDAO y DAO.
+  -  Desarrollo de los algoritmos de TDOA y DOA.
   -  Evaluación de los algoritmos sobre las simulaciones generadas.
+  
+Los audios anecoicos que usen para sus simulaciones acústicas pueden ser descargados del siguiente [link](https://datashare.ed.ac.uk/handle/10283/2651).
+
+Como trabajo adicional y opcional, pueden evaluar la capacidad de localizar espacialmente la fuente situándola en el campo cercano y usando la guía del capítulo 9 de [1].
 
 El desarrollo de su trabajo tiene que verse reflejado en un informe que siga el formato propuesto (en [Word](https://docs.google.com/document/d/1XwUWKWTRPKlJPzpGfd20riz-uNmUvYBx/edit?usp=drive_link&ouid=109118869525257004528&rtpof=true&sd=true) o en [LaTex](https://drive.google.com/file/d/12xZTOi8-OQKFwEuPdAjPenD1G1w3OghP/view?usp=drive_link)), cumpliendo con todas las secciones que en él se detallan. 
 
