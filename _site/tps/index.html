@@ -1930,19 +1930,16 @@
 <p><a class="glightbox" href="imgs/doa_tubas.jpg" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Tubas de guerra, primera guerra mundial" src="imgs/doa_tubas.jpg" title="Tubas de guerra, primera guerra mundial" /></a></p>
 <p>El desarrollo de este campo de estudio no se detuvo aquí, y a lo largo de los años surgieron varios algoritmos que permiten determinar de forma precisa localizaciones espaciales de fuentes a partir de un número reducido de sensores (bastante) más convencionales que los mencionados anteriormente. </p>
 <h2 id="el-tp">El TP<a class="headerlink" href="#el-tp" title="Permanent link">#</a></h2>
-<p>Las técnicas de estimación de arribo apuntan a, justamente, estimar la dirección de arribo de la señal sonora a los distintos sensores. Esto es sutilmente distinto a estimar la localización de la fuente, en donde buscamos determinar de forma precisa la posición (x,y,z) de la fuente en el espacio. Si la fuente sonora está localizada en el campo cercano, además de la dirección de arribo será posible determinar la distancia entre esta y los sensores. Esto es lo que buscaremos en este trabajo práctico, en donde estimaremos el ángulo azimuthal de la fuente en cuestión y su distancia a los distintos sensores. Suponiendo que contamos con, por ejemplo, 3 micrófonos equiespaciados, el experimento queda representado por el siguiente diagrama:</p>
-<p><a class="glightbox" href="imgs/doa_sensores.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Esquema DOA, N sensores equiespaciados" src="imgs/doa_sensores.png" title="Esquema DOA, 3 sensores equiespaciados" /></a></p>
-<p>en donde <span class="arithmatex">\(s(t)\)</span> representa la fuente cuya dirección se busca estimar en función del tiempo, <span class="arithmatex">\(y_n(t)\)</span> es la señal grabada por el enésimo sensor, <span class="arithmatex">\(r_n\)</span> la distancia entre la fuente y el sensor <span class="arithmatex">\(n\)</span>, <span class="arithmatex">\(\phi_n\)</span> es el ángulo incidente y <span class="arithmatex">\(d\)</span> es la distancia entre micrófonos.</p>
-<p>Obviamente, las distancias y los ángulos entre los sensores y la fuente son desconocidos, sino no habría mucho que discutir. Como casi siempre, hay una solución para este problema. Si conocemos las diferencias en los tiempos de arribo (TDOA, por las siglas en inglés) de las señales a cada micrófono, podemos estimar todas las variables que nos faltan. La TDOA entre los sensores 1 y 2 de nuestro ejemplo viene dada por:</p>
-<div class="arithmatex">\[ \tau_{1,2} = \frac{r_2-r_1}{c} \]</div>
-<p>en donde <span class="arithmatex">\(c\)</span> corresponde a la velocidad de propagación del sonido en aire.</p>
-<p>Por otro lado, la TDOA entre los sensores 1 y 3 es:</p>
-<div class="arithmatex">\[ \tau_{1,3} = \frac{r_3-r_1}{c} \]</div>
-<p>Por otro lado, usando trigonometría sabemos que:</p>
-<div class="arithmatex">\[ r_2^2 = r_1^2 + d^2 + 2r_1\;\cos(\phi_1) \]</div>
-<p>Análogamente:</p>
-<div class="arithmatex">\[ r_3^2 = r_1^2 + 4d^2 + 4r_1\;\cos(\phi_1) \]</div>
-<p>Ahora bien, los sensores son colocados por el usuario, así que una vez que se define la geometría del arreglo de micrófonos <span class="arithmatex">\(d\)</span> es un dato medible. Si podemos estimar de alguna forma <span class="arithmatex">\(\tau_{1,2}\)</span> y <span class="arithmatex">\(\tau_{1,3}\)</span>, usando las ecuaciones que acabamos de presentar podemos calcular las incógnitas <span class="arithmatex">\(r_1\)</span>, <span class="arithmatex">\(r_2\)</span>, <span class="arithmatex">\(r_3\)</span> y <span class="arithmatex">\(\phi_1\)</span>. Aplicando nuevamente trigonometría podemos estimar <span class="arithmatex">\(\phi_2\)</span> y <span class="arithmatex">\(\phi_3\)</span>, y, como se imaginarán este esquema de trabajo es extrapolable a un número arbitrario de sensores. Todo es calculable si conocemos, o estimamos, los TDOA. Es en este punto en donde nos vamos a centrar en el trabajo práctico.</p>
+<p>Las técnicas de estimación de arribo apuntan a, justamente, estimar la dirección de arribo de la señal sonora a los distintos sensores. Esto es sutilmente distinto a estimar la localización de la fuente, en donde buscamos determinar de forma precisa la posición (x,y,z) de la fuente en el espacio. Si la fuente sonora está localizada en el campo lejano, usando trigonometría es posible determinar la dirección de arribo. Esto es lo que buscaremos en este trabajo práctico, en donde estimaremos el ángulo azimuthal de la fuente en cuestión y su distancia a los distintos sensores. Suponiendo que contamos con, por ejemplo, 2 micrófonos equiespaciados, el experimento queda representado por el siguiente diagrama:</p>
+<p><a class="glightbox" href="imgs/doa_sensores1.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Esquema DOA, 2 sensores equiespaciados" src="imgs/doa_sensores1.png" title="Esquema DOA, 2 sensores equiespaciados" /></a></p>
+<p>en donde <span class="arithmatex">\(s(k)\)</span> representa la fuente cuya dirección se busca estimar en función del tiempo, <span class="arithmatex">\(y_n(t)\)</span> es la señal grabada por el enésimo sensor, <span class="arithmatex">\(\theta_n\)</span> es el ángulo incidente y <span class="arithmatex">\(d\)</span> es la distancia entre micrófonos.</p>
+<p>Tomemos el sensor de la derecha como nuestra referencia. Siempre y cuando el frente de onda incidente sea plano, el tiempo que tarda la señal en llegar al sensor 2 se puede calcular aplicando trigonometría, puntualmente mediante la siguiente expresión:</p>
+<div class="arithmatex">\[ \tau_{1,2} = \frac{d\;cos(\theta}{c} \]</div>
+<p>en donde <span class="arithmatex">\(\tau_{1,2}\)</span> refiere al retardo temporal entre las señales captadas por ambos micrófonos.</p>
+<p>Tranquilamente podríamos extender estas ideas a un arreglo de <span class="arithmatex">\(N\)</span> sensores, como se ve en este diagrama:</p>
+<p><a class="glightbox" href="imgs/doa_sensores2.png" data-type="image" data-width="auto" data-height="auto" data-desc-position="bottom"><img alt="Esquema DOA, N sensores equiespaciados" src="imgs/doa_sensores2.png" title="Esquema DOA, N sensores equiespaciados" /></a></p>
+<p>en este caso, se agrega una señal que no aparecía en el caso anterior, <span class="arithmatex">\(v_n(k)\)</span>, que denota el ruido presente en las grabaciones.</p>
+<p>Ahora bien, los sensores son colocados por el usuario, así que una vez que se define la geometría del arreglo de micrófonos <span class="arithmatex">\(d\)</span> es un dato medible. Si podemos estimar de alguna forma los <span class="arithmatex">\(\tau\)</span> entre micrófonos, usando la ecuación que acabamos de presentar podemos calcular las incógnitas <span class="arithmatex">\(\theta_n\)</span> para cada uno de los sensores. Promediando estos ángulos, obtendríamos el ángulo del arreglo con respecto a la fuente, es decir, estaríamos estimando el ángulo entre el centro del arreglo y la fuente. Entonces, el problema de estimación de dirección de arribo (DOA, por sus siglas en inglés) es en realidad un problema de estimación de tiempos de arribo (TDOA, por sus siglas en inglés). Todo es calculable si conocemos, o estimamos, los TDOA. Es en este punto en donde nos vamos a centrar en el trabajo práctico.</p>
 <p>La propuesta es que estimen las diferencias en tiempos de arribo mediante distintas técnicas: correlación cruzada clásica y su versión generalizada (con las distintas variantes que recaen dentro de esta versión). Como referencias, recomendamos el capítulo 9 de [1] y el trabajo de Knapp y CLifford [2], pero pueden extender esto si lo consideran pertinente. El array de sensores que deben proponer es de 4 micrófonos dispuestos linealmente con una separación de 10 cm entre ellos.</p>
 <p>La implementación de los algoritmos propuestos es muy sencilla, por lo que la parte más interesante del trabajo recaerá en el análsis que hagan de los resultados que obtengan. Algunas preguntas interesantes que deberían hacerse son:</p>
 <ul>
@@ -1956,15 +1953,17 @@
 <li>Error en función del ángulo de elevación de la fuente.</li>
 <li>Error en función de la distancia entre la fuente y los sensores.</li>
 <li>Error en función de la separación entre micrófonos.</li>
-<li>Error en función de la cantidad de micrófonos del arreglo.</li>
+<li>Error en función de la cantidad de micrófonos del arreglo. (para este punto y el anterior, referirse al capítulo 3 de [1]).</li>
 <li>Error en función de parámetros acústicos del recinto real.</li>
 <li>Error en función de parámetros elegidos al hacer la medición, como la frecuencia de muestreo.</li>
 <li>Otros tipos de análsis que se les ocurran.</li>
 </ul>
 <p>En líneas generales, el desarrollo del trabajo tiene tres etapas:
   -  Simulación de recintos, arrays de micrófonos y fuente con pyroomacoustics, EASE, o el software que prefieran. Acá se deberían contemplar variaciones de los parámetros que les permitirán evaluar sus algoritmos sobre las distintas situaciones propuestas.
-  -  Desarrollo de los algoritmos de TDAO y DAO.
+  -  Desarrollo de los algoritmos de TDOA y DOA.
   -  Evaluación de los algoritmos sobre las simulaciones generadas.</p>
+<p>Los audios anecoicos que usen para sus simulaciones acústicas pueden ser descargados del siguiente <a href="https://datashare.ed.ac.uk/handle/10283/2651">link</a>.</p>
+<p>Como trabajo adicional y opcional, pueden evaluar la capacidad de localizar espacialmente la fuente situándola en el campo cercano y usando la guía del capítulo 9 de [1].</p>
 <p>El desarrollo de su trabajo tiene que verse reflejado en un informe que siga el formato propuesto (en <a href="https://docs.google.com/document/d/1XwUWKWTRPKlJPzpGfd20riz-uNmUvYBx/edit?usp=drive_link&amp;ouid=109118869525257004528&amp;rtpof=true&amp;sd=true">Word</a> o en <a href="https://drive.google.com/file/d/12xZTOi8-OQKFwEuPdAjPenD1G1w3OghP/view?usp=drive_link">LaTex</a>), cumpliendo con todas las secciones que en él se detallan. </p>
 <h2 id="condiciones-para-la-entrega">Condiciones para la entrega<a class="headerlink" href="#condiciones-para-la-entrega" title="Permanent link">#</a></h2>
 <p>El trabajo puede realizarse en grupos de hasta 4 personas. Además de la entrega del trabajo completo se les pide una pre-entrega, que corresponde a una versión parcial del trabajo (secciones de Introducción, Marco teórico y Desarrollo experimental). También deben entregar el código correspondiente a las simulaciones acústicas y a los algoritmos de estimación de DOA y TDOA.</p>
@@ -1992,7 +1991,7 @@
     <span class="md-icon" title="Última actualización">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 20, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 21, 2025</span>
   </span>
 
     
