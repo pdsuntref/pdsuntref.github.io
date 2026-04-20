@@ -1,15 +1,18 @@
 # Clase 4
 
+<!--
 ## Diapositivas
 
 <iframe src="https://drive.google.com/file/d/1vpR6SZ-IoDQD6Q8XfPK69f7ulGcaRqZz/preview" width="640" height="480" allow="autoplay"></iframe>
+
+-->
 
 ## Ejercicio de clase
 
 ### Enunciado
 
 <iframe src="https://drive.google.com/file/d/1UcbQ_KrB0nq2lzHonIb72fKdfyfjFIx6/preview" width="640" height="480" allow="autoplay"></iframe>
-
+<!--
 [Resolución](https://drive.google.com/file/d/14JG9Re11MHzYclI3JKJmvIP2Y6oxFcPZ/view?usp=sharing)
 
 # Clase 5
@@ -33,3 +36,5 @@
 ## Diapositivas
 
 <iframe src="https://drive.google.com/file/d/1ojBwWY3ESBYuzO47mJLW9_0O5ilbrdos/preview" width="640" height="480" allow="autoplay"></iframe>
+
+-->

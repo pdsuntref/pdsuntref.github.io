@@ -12,6 +12,10 @@
 
 [¿Qué es la Transformada de Fourier? Una introducción visual](https://www.youtube.com/watch?v=h4PTucW3Rm0)
 
+### Presentaciones interactivas
+
+[DFT](https://acko.net/files/gltalks/toolsforthought/#0)
+
 
 ## Programación
 

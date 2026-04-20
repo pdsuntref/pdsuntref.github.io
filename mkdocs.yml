@@ -111,14 +111,14 @@ nav:
     - Teoría:
       - Señales y sistemas discretos: clases/sys_discretos.md
       - DTFT: clases/dtft.md
-        #- DFT: clases/dft.md
+      - DFT: clases/dft.md
         #- FFT: clases/fft.md
         #- TZ: clases/tz.md
         #- Filtros IIR: clases/iir.md
         #- Filtros FIR: clases/fir.md
     - Práctica:
       - Señales y sistemas discretos: clases/Psys_discretos.md
-        #- DTFT: clases/Pdtft.md
+      - DTFT: clases/Pdtft.md
         #- DFT: clases/Pdft.md
         #- TZ: clases/Ptz.md
         #- Filtros IIR: clases/Piir.md
