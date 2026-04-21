@@ -64,7 +64,7 @@
 
 ### Diapositivas
 
-<iframe src="https://drive.google.com/file/d/1CETmT73hG0ZHs4Sv0G0FsA-KREIWG0bY/preview" width="640" height="480" allow="autoplay"></iframe>
+<iframe src="https://drive.google.com/file/d/1HqgiQcsDh-_CJdhNmxZqnkPHTNoC_Cx2/preview" width="640" height="480"></iframe>
 
 ### Video
 
