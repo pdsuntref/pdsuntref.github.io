@@ -17,6 +17,5 @@
 
 [Archivo](https://drive.google.com/file/d/1isKFv0ZHAECiA-5EbQ53Z1gx-aRGH9kk/view?usp=drive_link)
 
-<!--
 [Resolución](https://drive.google.com/file/d/1kckZuHmwoHFcJ6iGSFBSPVSkrYNkhfq8/view?usp=sharing)
--->
+
