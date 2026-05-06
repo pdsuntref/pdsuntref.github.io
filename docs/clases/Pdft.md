@@ -12,14 +12,17 @@
 ### Enunciado
 
 <iframe src="https://drive.google.com/file/d/1UcbQ_KrB0nq2lzHonIb72fKdfyfjFIx6/preview" width="640" height="480" allow="autoplay"></iframe>
-<!--
+
 [Resolución](https://drive.google.com/file/d/14JG9Re11MHzYclI3JKJmvIP2Y6oxFcPZ/view?usp=sharing)
 
 # Clase 5
 
+<--
+
 ## Diapositivas
 
 <iframe src="https://drive.google.com/file/d/1oSx8X_NT8g1khnT_1QJ46DXGuCskZ7Qq/preview" width="640" height="480" allow="autoplay"></iframe>
+-->
 
 ## Ejercicio de clase
 
@@ -31,6 +34,7 @@
 
 [Resolución](https://drive.google.com/file/d/1CQV8nmQrAbem8XCUg2jbenq156JpVsaw/view?usp=sharing)
 
+<--
 # Clase 6 (Repaso parcial)
 
 ## Diapositivas
