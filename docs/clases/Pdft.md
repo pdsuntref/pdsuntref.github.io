@@ -17,12 +17,9 @@
 
 # Clase 5
 
-<--
-
 ## Diapositivas
 
 <iframe src="https://drive.google.com/file/d/1oSx8X_NT8g1khnT_1QJ46DXGuCskZ7Qq/preview" width="640" height="480" allow="autoplay"></iframe>
--->
 
 ## Ejercicio de clase
 
@@ -34,7 +31,7 @@
 
 [Resolución](https://drive.google.com/file/d/1CQV8nmQrAbem8XCUg2jbenq156JpVsaw/view?usp=sharing)
 
-<--
+<!--
 # Clase 6 (Repaso parcial)
 
 ## Diapositivas
