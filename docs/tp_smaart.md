@@ -1,6 +1,6 @@
 # Filtrado e identificación de sistemas
 
-Un analizador de doble canal es un dispositivo que analiza en simultáneo dos señales, generalmente la entrada y la salida de un sistema a caracterizar. Su respuesta en frecuencia $H(\omega)$ se puede obtener mediante la ecuación \ref{eq:func_transf}
+Un analizador de doble canal es un dispositivo que analiza en simultáneo dos señales, generalmente la entrada y la salida de un sistema a caracterizar. Su respuesta en frecuencia $H(\omega)$ se puede obtener mediante la ecuación
 
 $$H(\omega) = \frac{Y(\omega)}{X(\omega)}$$
 
@@ -8,25 +8,25 @@ en donde $Y(\omega)$ es la transformada de Fourier de la señal de salida, $y[n]
 
 Si nuestro sistema se puede considerar lineal e invariante en el tiempo, conocer su respuesta en frecuencia implica que lo tenemos completamente caracterizado, ya que su antitransformada corresponde a su respuesta al impulso. A través de esta caracterización es muy simple conocer el efecto que el sistema tendrá mediante la convolución entre la señal de entrada y la respuesta al impulso $h[n]$:
 
-$$y[n] = \sum_{-\infty}^{\infty}x[k]*h[n-k]$$
+$$y[n] = \sum_{k=-\infty}^{\infty}x[n]*h[n-k]$$
 
 o, en frecuencia:
 
 $$Y(\omega) = X(\omega)Y(\omega)$$
 
-El trabajo práctico se divide en dos partes. La primera consiste en el desarrollo mediante código de un sistema que permita realizar las siguientes tareas mediante distintas funciones:
+El trabajo práctico se divide en dos partes. La primera consiste en el desarrollo mediante código de un sistema que permita realizar las siguientes tareas:
 
 * Graficar una o varias señales temporales.
 
 * Graficar uno o varios espectros de Fourier.
 
-* Determinar la función transferencia $H(\omega)$ dado un par de señales de entrada y salida $X(\omega)$ e $Y(\omega)$.
+* Determinar la respuesta en frecuencia de un sistema $H(\omega)$ dado un par de señales de entrada y salida $X(\omega)$ e $Y(\omega)$.
 
 * Generar respuestas al impulso para los siguientes filtros: media móvil con una, dos y tres pasadas, filtro peine, filtro de respuesta al impulso finita. Las ecuaciones para los distintos filtros propuestos son:
 
-  * Filtro media móvil: $h[n]=\frac{1}{M}$, siendo $M$ el largo de la ventana.
-  * Filtro peine: $h[n] = b_0 + b_1\,\delta[n-1] + b_2\,\delta[n-2]$, donde $b_0$, $b_1$ y $b_2$ son coeficientes constantes.
-  * Filtro de respuesta al impulso finita: coeficientes provistos por la cátedra.
+  - Filtro media móvil: $h[n]=\frac{1}{M}$, siendo $M$ el largo de la ventana.
+  - Filtro peine: $h[n] = b_0 + b_1\,\delta[n-1] + b_2\,\delta[n-2]$, donde $b_0$, $b_1$ y $b_2$ son coeficientes constantes.
+  - Filtro de respuesta al impulso finita: coeficientes provistos por la cátedra.
 
 * Caracterizar en frecuencia los filtros (módulo y fase). Analizar y discutir los comportamientos encontrados y las diferencias entre los distintos casos.
 
@@ -34,8 +34,8 @@ El trabajo práctico se divide en dos partes. La primera consiste en el desarrol
 
 * Generar las siguientes señales temporales:
   
-  * Suma de tonos puros + ruido blanco de distintas amplitudes.
-  * Señal musical elegida por el grupo + ruido blanco de distintas amplitudes.
+  - Suma de tonos puros + ruido blanco de distintas amplitudes.
+  - Señal musical elegida por el grupo + ruido blanco de distintas amplitudes.
 
 * Filtrar las señales con los filtros diseñados y analizar los resultados. Hacerlo mediante convolución en el dominio del tiempo y mediante convolución circular en frecuencia (usar propiedades).
 
@@ -49,7 +49,7 @@ donde $\gamma_{xy}^2(\omega)$ es la coherencia cuadrática, $G_{xy}(\omega)$ es 
 
 $$G_{uv}(\omega) = \left\langle U(\omega)V^*(\omega) \right\rangle$$
 
-en donde $\langle\rangle$ corresponde al promedio temporal de varios bloques de transformadas. Esto último consiste en tomar ventanas (solapadas o no) de las señales temporales, calcular las transformadas de cada bloque y promediar los sucesivos espectros. ¿Qué se ganaría trabajando así?
+en donde $\langle\dot\rangle$ corresponde al promedio temporal de varios bloques de transformadas. Esto último consiste en tomar ventanas (solapadas o no) de las señales temporales, calcular las transformadas de cada bloque y promediar los sucesivos espectros. ¿Qué se ganaría trabajando así?
 
 La coherencia toma valores entre 0 y 1. Si la coherencia vale 1 para alguna frecuencia en particular, la relación entre las señales de entrada y salida a esa frecuencia es perfectamente lineal. En cambio, si este parámetro vale 0 para alguna frecuencia en particular, significa que no existe relación lineal en esa parte del espectro. ¿Por qué consideran que se cumplen esas relaciones dada la forma en la que se calcula la coherencia? Para el caso de los pares de señales que deben analizar, ¿cómo es la linealidad del sistema en distintas partes del espectro? ¿Qué tipos de sistemas reales podrían dar lugar a ese tipo de comportamientos?
 
