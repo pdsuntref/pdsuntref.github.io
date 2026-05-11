@@ -145,7 +145,6 @@ nav:
     - Seminarios: extras/seminarios.md
     - JAAS: extras/tps_jaas.md
     - Videos y recursos útiles: extras/misc.md
-    - tps/tp_smaart.md
 
 extra:
   bibliografia:
