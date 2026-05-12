@@ -8,11 +8,11 @@ en donde $Y(\omega)$ es la transformada de Fourier de la señal de salida, $y[n]
 
 Si nuestro sistema se puede considerar lineal e invariante en el tiempo, conocer su respuesta en frecuencia implica que lo tenemos completamente caracterizado, ya que su antitransformada corresponde a su respuesta al impulso. A través de esta caracterización es muy simple conocer el efecto que el sistema tendrá mediante la convolución entre la señal de entrada y la respuesta al impulso $h[n]$:
 
-$$y[n] = \sum_{k=-\infty}^{\infty}x[n]*h[n-k]$$
+$$y[n] = \sum_{k=-\infty}^{\infty}x[k]*h[n-k]$$
 
 o, en frecuencia:
 
-$$Y(\omega) = X(\omega)Y(\omega)$$
+$$Y(\omega) = X(\omega)H(\omega)$$
 
 El trabajo práctico se divide en dos partes. La primera consiste en el desarrollo mediante código de un sistema que permita realizar las siguientes tareas:
 
@@ -35,7 +35,7 @@ El trabajo práctico se divide en dos partes. La primera consiste en el desarrol
 * Generar las siguientes señales temporales:
   
   - Suma de tonos puros + ruido blanco de distintas amplitudes.
-  - Señal musical elegida por el grupo + ruido blanco de distintas amplitudes.
+  - Señal musical + ruido blanco de distintas amplitudes.
 
 * Filtrar las señales con los filtros diseñados y analizar los resultados. Hacerlo mediante convolución en el dominio del tiempo y mediante convolución circular en frecuencia (usar propiedades).
 
@@ -45,11 +45,7 @@ La segunda parte consiste en la identificación de sistemas desconocidos usando 
 
 $$\gamma_{xy}^2(\omega)=\frac{|G_{xy}(\omega)|^2}{G_{xx}(\omega)\,G_{yy}(\omega)}$$
 
-donde $\gamma_{xy}^2(\omega)$ es la coherencia cuadrática, $G_{xy}(\omega)$ es la densidad espectral de potencia cruzada entre las señales de entrada y salida, $G_{xx}(\omega)$ es la densidad espectral de potencia de la señal de entrada y $G_{yy}(\omega)$ es la densidad espectral de potencia de la señal de salida. Las densidades espectrales de potencia se calculan, de forma genérica, según la siguiente ecuación:
-
-$$G_{uv}(\omega) = \left\langle U(\omega)V^*(\omega) \right\rangle$$
-
-en donde $\langle\dot\rangle$ corresponde al promedio temporal de varios bloques de transformadas. Esto último consiste en tomar ventanas (solapadas o no) de las señales temporales, calcular las transformadas de cada bloque y promediar los sucesivos espectros. ¿Qué se ganaría trabajando así?
+donde $\gamma_{xy}^2(\omega)$ es la coherencia cuadrática, $G_{xy}(\omega)$ es la densidad espectral de potencia cruzada entre las señales de entrada y salida, $G_{xx}(\omega)$ es la densidad espectral de potencia de la señal de entrada y $G_{yy}(\omega)$ es la densidad espectral de potencia de la señal de salida. Las densidades espectrales de potencia se calculan corresponden a las transformadas de Fourier de las correlaciones cruzadas o autocorrelaciones, dependiendo del caso.
 
 La coherencia toma valores entre 0 y 1. Si la coherencia vale 1 para alguna frecuencia en particular, la relación entre las señales de entrada y salida a esa frecuencia es perfectamente lineal. En cambio, si este parámetro vale 0 para alguna frecuencia en particular, significa que no existe relación lineal en esa parte del espectro. ¿Por qué consideran que se cumplen esas relaciones dada la forma en la que se calcula la coherencia? Para el caso de los pares de señales que deben analizar, ¿cómo es la linealidad del sistema en distintas partes del espectro? ¿Qué tipos de sistemas reales podrían dar lugar a ese tipo de comportamientos?
 
