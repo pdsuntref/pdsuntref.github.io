@@ -49,6 +49,8 @@ donde $\gamma_{xy}^2(\omega)$ es la coherencia cuadrática, $G_{xy}(\omega)$ es 
 
 La coherencia toma valores entre 0 y 1. Si la coherencia vale 1 para alguna frecuencia en particular, la relación entre las señales de entrada y salida a esa frecuencia es perfectamente lineal. En cambio, si este parámetro vale 0 para alguna frecuencia en particular, significa que no existe relación lineal en esa parte del espectro. ¿Por qué consideran que se cumplen esas relaciones dada la forma en la que se calcula la coherencia? Para el caso de los pares de señales que deben analizar, ¿cómo es la linealidad del sistema en distintas partes del espectro? ¿Qué tipos de sistemas reales podrían dar lugar a ese tipo de comportamientos?
 
+Los archivos necesarios para el desarrollo del TP se pueden descargar desde [acá](https://drive.google.com/file/d/1M1ZIad6wkAGW37XznnPmmJuxjvY9RYkz/view?usp=sharing).
+
 
 ## Condiciones para la entrega
 
