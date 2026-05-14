@@ -112,7 +112,7 @@ nav:
       - Señales y sistemas discretos: clases/sys_discretos.md
       - DTFT: clases/dtft.md
       - DFT: clases/dft.md
-        #- FFT: clases/fft.md
+      - FFT: clases/fft.md
         #- TZ: clases/tz.md
         #- Filtros IIR: clases/iir.md
         #- Filtros FIR: clases/fir.md
