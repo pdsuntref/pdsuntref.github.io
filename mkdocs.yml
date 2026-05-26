@@ -113,7 +113,7 @@ nav:
       - DTFT: clases/dtft.md
       - DFT: clases/dft.md
       - FFT: clases/fft.md
-        #- TZ: clases/tz.md
+      - TZ: clases/tz.md
         #- Filtros IIR: clases/iir.md
         #- Filtros FIR: clases/fir.md
     - Práctica:
@@ -129,7 +129,7 @@ nav:
     - Señales y sistemas discretos: ejercicios/guia_sys.md
     - DTFT: ejercicios/guia_dtft.md
     - DFT: ejercicios/guia_dft.md
-      #- TZ señales: ejercicios/guia_tz1.md
+    - TZ señales: ejercicios/guia_tz1.md
       #- TZ sistemas: ejercicios/guia_tz2.md
       #- Filtros IIR: ejercicios/guia_iir.md
       #- Filtros FIR: ejercicios/guia_fir.md
