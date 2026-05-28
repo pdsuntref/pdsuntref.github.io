@@ -1,0 +1,12 @@
+blockquote {
+    text-align: justify;
+}
+
+.quote {
+    position: relative;
+}
+
+cite {
+    font-size: small;
+    text-align: right;
+}

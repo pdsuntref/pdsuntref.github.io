@@ -1,0 +1,12 @@
+<div class="cards">
+  {% for docente in docentes %}
+  <div class="card">
+    <div class="card-header">
+    <a href="{{docente.calendario}}&amp;headers=false&amp;chrome=false">{% if docente.foto %}
+      <img title="{{docente.nombre}}"
+           src="/assets/img/docentes/{{docente.foto}}" alt="{{docente.nombre}}">
+      {% endif %}</a>
+    </div>
+  </div>
+  {% endfor %}
+</div>

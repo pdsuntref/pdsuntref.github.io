@@ -25,7 +25,7 @@ El trabajo práctico se divide en dos partes. La primera consiste en el desarrol
 * Generar respuestas al impulso para los siguientes filtros: media móvil con una, dos y tres pasadas, filtro peine, filtro de respuesta al impulso finita. Las ecuaciones para los distintos filtros propuestos son:
 
   - Filtro media móvil: $h[n]=\frac{1}{M}$, siendo $M$ el largo de la ventana.
-  - Filtro peine: $h[n] = b_0 + b_1\,\delta[n-1] + b_2\,\delta[n-2]$, donde $b_0$, $b_1$ y $b_2$ son coeficientes constantes.
+  - Filtro peine: $h[n] = b_0 \delta[n] + b_1\,\delta[n-1] + b_2\,\delta[n-2]$, donde $b_0$, $b_1$ y $b_2$ son coeficientes constantes.
   - Filtro de respuesta al impulso finita: coeficientes provistos por la cátedra.
 
 * Caracterizar en frecuencia los filtros (módulo y fase). Analizar y discutir los comportamientos encontrados y las diferencias entre los distintos casos.
