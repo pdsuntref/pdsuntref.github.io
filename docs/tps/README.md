@@ -51,6 +51,7 @@ La coherencia toma valores entre 0 y 1. Si la coherencia vale 1 para alguna frec
 
 Los archivos necesarios para el desarrollo del TP se pueden descargar desde [acá](https://drive.google.com/file/d/1M1ZIad6wkAGW37XznnPmmJuxjvY9RYkz/view?usp=sharing).
 
+Los archivos para la segunda parte del TP se pueden descargar desde [acá](https://drive.google.com/file/d/1qcKHa2p7fOL46sccjaSA-gCM0q8taUQ6/view?usp=sharing).
 
 ## Condiciones para la entrega
 
