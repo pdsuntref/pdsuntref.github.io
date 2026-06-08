@@ -130,7 +130,7 @@ nav:
     - DTFT: ejercicios/guia_dtft.md
     - DFT: ejercicios/guia_dft.md
     - TZ señales: ejercicios/guia_tz1.md
-      #- TZ sistemas: ejercicios/guia_tz2.md
+    - TZ sistemas: ejercicios/guia_tz2.md
       #- Filtros IIR: ejercicios/guia_iir.md
       #- Filtros FIR: ejercicios/guia_fir.md
   - Trabajo Práctico: tps/README.md
