@@ -114,14 +114,14 @@ nav:
       - DFT: clases/dft.md
       - FFT: clases/fft.md
       - TZ: clases/tz.md
-        #- Filtros IIR: clases/iir.md
+      - Filtros IIR: clases/iir.md
         #- Filtros FIR: clases/fir.md
     - Práctica:
       - Señales y sistemas discretos: clases/Psys_discretos.md
       - DTFT: clases/Pdtft.md
       - DFT: clases/Pdft.md
-        #- TZ: clases/Ptz.md
-        #- Filtros IIR: clases/Piir.md
+      - TZ: clases/Ptz.md
+      - Filtros IIR: clases/Piir.md
         #- Filtros FIR: clases/Pfir.md
   - Guías de ejercicios: 
     - ejercicios/README.md
@@ -131,7 +131,7 @@ nav:
     - DFT: ejercicios/guia_dft.md
     - TZ señales: ejercicios/guia_tz1.md
     - TZ sistemas: ejercicios/guia_tz2.md
-      #- Filtros IIR: ejercicios/guia_iir.md
+    - Filtros IIR: ejercicios/guia_iir.md
       #- Filtros FIR: ejercicios/guia_fir.md
   - Trabajo Práctico: tps/README.md
   - Evaluaciones pasadas: 
