@@ -4,7 +4,7 @@
 
 <iframe src="https://drive.google.com/file/d/1oi1ezEBYCrNp8iF_GyR1xac9LtGFkkSu/preview" width="640" height="480" allow="autoplay"></iframe>
 
-<!-- 
+ 
 # Clase 9
 
 ## Partes 1 y 2
@@ -39,4 +39,4 @@
 
 <iframe src="https://drive.google.com/file/d/1YPuOPXZueCJ0g1CtPtUbfexkrg-e08Zl/preview" width="640" height="480" allow="autoplay"></iframe>
 
--->
+
