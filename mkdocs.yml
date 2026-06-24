@@ -122,7 +122,7 @@ nav:
       - DFT: clases/Pdft.md
       - TZ: clases/Ptz.md
       - Filtros IIR: clases/Piir.md
-        #- Filtros FIR: clases/Pfir.md
+      - Filtros FIR: clases/Pfir.md
   - Guías de ejercicios: 
     - ejercicios/README.md
     - Programación: ejercicios/programacion.md
